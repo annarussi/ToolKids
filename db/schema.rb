@@ -10,9 +10,47 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_05_152059) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_05_154032) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "avatars", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "games", force: :cascade do |t|
+    t.string "name"
+    t.integer "score"
+    t.boolean "completed"
+    t.bigint "map_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["map_id"], name: "index_games_on_map_id"
+  end
+
+  create_table "kids", force: :cascade do |t|
+    t.string "nickname"
+    t.integer "total_score"
+    t.integer "age"
+    t.bigint "user_id", null: false
+    t.bigint "avatar_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["avatar_id"], name: "index_kids_on_avatar_id"
+    t.index ["user_id"], name: "index_kids_on_user_id"
+  end
+
+  create_table "maps", force: :cascade do |t|
+    t.string "name"
+    t.integer "level"
+    t.boolean "completed"
+    t.bigint "kid_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["kid_id"], name: "index_maps_on_kid_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -26,4 +64,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_05_152059) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "games", "maps"
+  add_foreign_key "kids", "avatars"
+  add_foreign_key "kids", "users"
+  add_foreign_key "maps", "kids"
 end
