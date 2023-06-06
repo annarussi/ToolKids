@@ -1,8 +1,6 @@
 class KidsController < ApplicationController
   before_action :set_kids, only: %i[destroy]
 
-  before_action :set_kids, only: %i[destroy]
-
   def index
     @kids = Kid.all
   end
@@ -37,7 +35,7 @@ class KidsController < ApplicationController
   end
 
   def set_kids
-    @kid = Kid.find(params[id])
+    @kid = Kid.find(params[:id])
   end
 
 end
