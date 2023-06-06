@@ -16,6 +16,8 @@ avatar1.save!
 
 user1 = User.new(email: "lishina@gmail.com", password: "123123", first_name: "Lishina", last_name: "Naoki")
 user1.save!
+user2 = User.new(email: "naoki@gmail.com", password: "123123", first_name: "Naoki", last_name: "Naoki")
+user2.save!
 
 kid1 = Kid.new(nickname: "lichi", age: 5, avatar: avatar1, user: user1)
 kid1.save!
