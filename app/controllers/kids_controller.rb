@@ -1,7 +1,5 @@
 class KidsController < ApplicationController
-  before_action :set_kids, only: %i[destroy]
-
-  before_action :set_kids, only: %i[destroy]
+  before_action :set_kids, only: %i[destroy lecture]
 
   def index
     @kids = Kid.all
@@ -27,6 +25,9 @@ class KidsController < ApplicationController
   def destroy
     @kid = Kid.destroy
     redirect_to kids_path
+  end
+
+  def lecture
   end
 
 
