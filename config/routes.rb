@@ -8,6 +8,12 @@ Rails.application.routes.draw do
 
   resources :kids, only: [:index, :new, :create, :destroy] do
     resources :games, only: [:index, :show]
+
+    member do
+      get :lecture
+    end
+
   end
+
 
 end
