@@ -1,1 +1,43 @@
-<%= @game.name %>
+<div class="container">
+
+  <h1><%= @game.name %></h1>
+
+  <div class="card-sound">
+    <h5>VERMELHO
+      <i class="fa-solid fa-play"></i>
+    </h5>
+  </div>
+
+  <div class="cards">
+
+    <div class="row">
+
+      <div class="card col-4 mx-2">
+        <p>Answer 1</p>
+      </div>
+
+      <div class="card col-4">
+        <p>Answer 2</p>
+      </div>
+
+    </div>
+
+    <div class="row mt-4">
+
+      <div class="card col-4 mx-2">
+        <p>Answer 3</p>
+      </div>
+
+      <div class="card col-4">
+        <p>Answer 4</p>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    <%= link_to lecture_kid_game_path(@game) do %>
+      <i class="fa-solid fa-chevron-left"></i>
+    <% end %>
+  </footer>
+</div>
