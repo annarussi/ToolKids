@@ -1,0 +1,5 @@
+<%= simple_form_for @kid do |f| %>
+  <%= f.input :nickname, :label => 'nickname' %>
+  <%= f.input :age, as: :integer %>
+  <%= f.button :submit %>
+<% end %>
