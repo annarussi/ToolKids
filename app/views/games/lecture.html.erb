@@ -1,0 +1,22 @@
+<div class="container">
+  <h1><%= @game.name %></h1>
+
+  <div class="cards">
+    <div class="row">
+      <div class="card text-white bg-danger mb-3 mx-2 col-4">vermelho</div>
+      <div class="card  text-white bg-warning mb-3 col-4">amarelo</div>
+    </div>
+    <div class="row">
+      <div class="card text-white bg-success mb-3  mx-2 col-4">verde</div>
+      <div class="card  text-white bg-primary mb-3 col-4">azul</div>
+    </div>
+  </div>
+
+  <footer>
+    <%= link_to kid_games_path do %>
+      <i class="fa-solid fa-map"></i>
+    <% end %>
+
+    <%= link_to "Let's play!", kid_game_path(@game) %>
+  </footer>
+</div>

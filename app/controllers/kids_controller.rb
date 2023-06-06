@@ -1,5 +1,5 @@
 class KidsController < ApplicationController
-  before_action :set_kids, only: %i[destroy lecture]
+  before_action :set_kids, only: %i[destroy]
 
   def index
     @kids = Kid.all
@@ -27,9 +27,6 @@ class KidsController < ApplicationController
     redirect_to kids_path
   end
 
-  def lecture
-  end
-
 
   private
 
@@ -38,7 +35,7 @@ class KidsController < ApplicationController
   end
 
   def set_kids
-    @kid = Kid.find(params[id])
+    @kid = Kid.find(params[:id])
   end
 
 end
