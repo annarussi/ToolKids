@@ -11,12 +11,22 @@ User.destroy_all
 Kid.destroy_all
 Game.destroy_all
 
-User1 = User.create(email:"lishina@gmail.com", password: "111111")
+avatar1 = Avatar.new(name: "moana")
+avatar1.save!
 
-Kid1 = Kid.create(nickname:"lichi", age: 5)
-Kid2 = Kid.create(nickname:"naoki", age: 6)
+user1 = User.new(email: "lishina@gmail.com", password: "123123", first_name: "Lishina", last_name: "Naoki")
+user1.save!
 
-Game1 = Game.create(name:"colours", level: 1)
-Game2 = Game.create(name:"animals", level: 2)
-Game3 = Game.create(name:"objects", level: 3)
-Game4 = Game.create(name:"sounds", level: 4)
+kid1 = Kid.new(nickname: "lichi", age: 5, avatar: avatar1, user: user1)
+kid1.save!
+kid2 = Kid.new(nickname: "naoki", age: 6, avatar: avatar1, user: user1)
+kid2.save!
+
+game1 = Game.new(name: "colors", level: 1, kid: kid1)
+game1.save!
+game2 = Game.new(name: "animals", level: 1, kid: kid1)
+game2.save!
+game3 = Game.new(name: "objects", level: 2, kid: kid2)
+game3.save!
+game4 = Game.new(name: "sounds", level: 2, kid: kid2)
+game4.save!
