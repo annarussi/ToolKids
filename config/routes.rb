@@ -7,13 +7,11 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   resources :kids, only: [:index, :new, :create, :destroy] do
-    resources :games, only: [:index, :show]
-
-    member do
-      get :lecture
+    resources :games, only: [:index, :show] do
+      member do
+        get :lecture
+      end
     end
-
   end
-
 
 end
