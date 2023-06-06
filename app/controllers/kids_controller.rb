@@ -1,4 +1,5 @@
 class KidsController < ApplicationController
+  before_action :set_kids, only: %i[destroy]
 
   before_action :set_kids, only: %i[destroy]
 
@@ -34,7 +35,7 @@ class KidsController < ApplicationController
   def kid_params
     params.require(:kid).permit(:nickname, :age)
   end
-  
+
   def set_kids
     @kid = Kid.find(params[id])
   end
