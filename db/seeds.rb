@@ -6,8 +6,6 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-<<<<<<< HEAD
-=======
 puts "Cleaning database..."
 User.destroy_all
 Kid.destroy_all
@@ -22,4 +20,3 @@ Game1 = Game.create(name:"colours", level: 1)
 Game2 = Game.create(name:"animals", level: 2)
 Game3 = Game.create(name:"objects", level: 3)
 Game4 = Game.create(name:"sounds", level: 4)
->>>>>>> master
