@@ -15,6 +15,15 @@ class KidsController < ApplicationController
     else
       render :new, status: :unprocessable_entity
     end
+  before_action :set_kids, only: %i[destroy]
+
+  def index
+    @kids = Kid.all
+  end
+
+  def destroy
+    @kid = Kid.destroy
+    redirect_to kids_path
   end
 
   private
@@ -22,4 +31,8 @@ class KidsController < ApplicationController
   def kid_params
     params.require(:kid).permit(:nickname, :age)
   end
+  def set_kids
+    @kid = Kid.find(params[id])
+  end
+
 end
