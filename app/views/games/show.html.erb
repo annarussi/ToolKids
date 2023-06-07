@@ -16,11 +16,13 @@
     <div class="row">
 
       <div class="card col-4 mx-2" data-action="click->game#playAzul">
-        <p>Azul</p>
+        <audio src="<%=audio_path 'azul.mp3' %>" data-game-target="azul"></audio>
+          <p>Azul</p>
       </div>
 
       <div class="card col-4" data-action="click->game#playAmarelo">
-        <p>Amarelo</p>
+        <audio src="<%=audio_path 'amarelo.mp3' %>" data-game-target="amarelo"></audio>
+          <p>Amarelo</p>
       </div>
 
     </div>
@@ -28,11 +30,14 @@
     <div class="row mt-4">
 
       <div class="card col-4 mx-2" data-action="click->game#playVerde">
-        <p>Verde</p>
+        <audio src="<%=audio_path 'verde.mp3' %>" data-game-target="verde"></audio>
+          <p>Verde</p>
       </div>
 
       <div class="card col-4" data-action="click->game#playWin">
-        <p>Vermelho</p>
+
+        <audio src="<%=audio_path 'vermelho_win.mp3' %>" data-game-target="win"></audio>
+          <p>Vermelho</p>
       </div>
 
     </div>
