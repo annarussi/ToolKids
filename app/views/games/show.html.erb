@@ -2,10 +2,13 @@
 
   <h1><%= @game.name %></h1>
 
-  <div class="card-sound" data-action="click->game#playVermelho">
+  <div class="card-sound" data-action="click->game#playSound">
+
+    <audio src="<%= audio_path 'vermelho.mp3'%>" data-game-target="vermelho"></audio>
     <h5>VERMELHO
-      <i class="fa-solid fa-play"></i>
+      <i class="fa-solid fa-play" data-action="click->game#playSound"></i>
     </h5>
+
   </div>
 
   <div class="cards">
