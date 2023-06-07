@@ -1,5 +1,7 @@
-<% @games.each do |game| %>
-  <h1><%= game.name %></h1>
-  <h2><%= game.kid.nickname %></h2>
-  <%= link_to "game", lecture_kid_game_path(game.kid, game), class: "btn btn-primary" %>
-<% end %>
+<div class="map">
+  <div class="container text-center py-5">
+    <% @games.each do |game| %>
+      <%= link_to "#{game.name}, #{game.kid.nickname}", lecture_kid_game_path(game.kid, game), class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
