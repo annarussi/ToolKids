@@ -1,6 +1,5 @@
-
-      <% @games.each do |game| %>
-        <h1><%= game.name %></h1>
-        <h2><%= game.kid.nickname %></h2>
-      <% end %>
-
+<% @games.each do |game| %>
+  <h1><%= game.name %></h1>
+  <h2><%= game.kid.nickname %></h2>
+  <%= link_to "game", lecture_kid_game_path(game.kid, game), class: "btn btn-primary" %>
+<% end %>
