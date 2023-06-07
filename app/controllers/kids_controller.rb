@@ -1,5 +1,5 @@
 class KidsController < ApplicationController
-  before_action :set_kids, only: %i[show destroy]
+  before_action :set_kids, only: %i[show destroy edit]
 
   def index
     @kids = Kid.all
