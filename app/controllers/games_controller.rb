@@ -1,6 +1,6 @@
 class GamesController < ApplicationController
-  before_action :set_game, only: [:show, :lecture]
-  before_action :set_kid, only: [:lecture]
+  before_action :set_game, only: %i[show lecture]
+  before_action :set_kid, only: %i[lecture]
 
   def index
     @games = Game.all
