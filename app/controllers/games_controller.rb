@@ -1,5 +1,5 @@
 class GamesController < ApplicationController
-  before_action :set_game, only: %i[show lecture]
+  before_action :set_game, only: %i[show lecture completed]
   before_action :set_kid, only: %i[lecture]
 
   def index
@@ -7,10 +7,14 @@ class GamesController < ApplicationController
   end
 
   def show
-    @games = Game.all
   end
 
   def lecture
+  end
+
+  def completed
+    @game.completed = true
+    @game.save
   end
 
   private
