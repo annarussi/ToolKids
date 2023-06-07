@@ -6,6 +6,8 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
+require "open-uri"
+
 puts "Cleaning database..."
 User.destroy_all
 Kid.destroy_all
@@ -26,6 +28,13 @@ kid2.save!
 
 game1 = Game.new(name: "colors", level: 1, kid: kid1)
 game1.save!
+
+file = URI.open("https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Solid_blue.svg/2500px-Solid_blue.svg.png")
+game1.photos.attach(io: file, filename: "blue.png", content_type: "image/png")
+
+puts "No problem in cloudinary"
+
+
 game2 = Game.new(name: "animals", level: 1, kid: kid1)
 game2.save!
 game3 = Game.new(name: "objects", level: 2, kid: kid2)

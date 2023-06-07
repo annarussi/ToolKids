@@ -1,5 +1,13 @@
 <div class="container" data-controller="game">
 
+  <div class="d-none" data-game-target="gameId">
+    <%= @game.id %>
+  </div>
+
+  <div class="d-none" data-game-target="kidId">
+    <%= @game.kid.id %>
+  </div>
+
   <h1><%= @game.name %></h1>
 
   <div class="card-sound" data-action="click->game#playSound">
@@ -15,9 +23,10 @@
 
     <div class="row">
 
+
       <div class="card col-4 mx-2" data-action="click->game#playAzul">
         <audio src="<%= audio_path 'azul.mp3' %>" data-game-target="azul"></audio>
-          <%= image_tag ("blue") %>
+          <%= cl_image_tag @game.photos[0].key %>
       </div>
 
       <div class="card col-4" data-action="click->game#playAmarelo">
