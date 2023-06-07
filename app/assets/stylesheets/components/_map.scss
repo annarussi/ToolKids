@@ -14,7 +14,7 @@
   left: 280px;
   color: rgb(110, 7, 183);
   font-size: 25px;
-  outline: black;
+  text-decoration: none;
 }
 
 #game2 {
@@ -23,6 +23,7 @@
   left: 240px;
   color: rgb(1, 73, 241);
   font-size: 25px;
+  text-decoration: none;
 }
 
 #game3 {
@@ -31,6 +32,7 @@
   left: 310px;
   color: red;
   font-size: 25px;
+  text-decoration: none;
 }
 
 #game4 {
@@ -39,4 +41,33 @@
   left: 70px;
   color: rgb(255, 255, 0);
   font-size: 25px;
+  text-decoration: none;
+}
+
+#game1-title {
+  font-size:20px;
+  background-color: rgb(110, 7, 183);
+  border-radius: 10px;
+  color: white;
+}
+
+#game2-title {
+  font-size:20px;
+  background-color: rgb(1, 73, 241);
+  border-radius: 10px;
+  color: white;
+}
+
+#game3-title {
+  font-size:20px;
+  background-color: red;
+  border-radius: 10px;
+  color: white;
+}
+
+#game4-title {
+  font-size:20px;
+  background-color: rgb(255, 255, 0);
+  border-radius: 10px;
+  color: brown;
 }
