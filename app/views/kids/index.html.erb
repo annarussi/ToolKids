@@ -2,17 +2,23 @@
   <div>
     <h1>Who is learning?</h1>
   </div>
-  <div>
+  <div class="row">
     <% @kids.each do |kid| %>
     <div class="d-flex-column justify-content-center my-5">
-      <ul class="text-center align-items-center" type="none">
-        <li>
-          <img class="avatar" alt="avatar" src="https://i2-prod.mylondon.news//article18152052.ece/ALTERNATES/s1200b/0_Moana.jpg">
-          <%= kid.nickname %>
-        </li>
-      </ul>
-    </div>
+      <%#= link_to kid_path(kid), class:"text-decoration-none" do %>
+        <ul class="text-center align-items-center" type="none">
+          <li>
+            <img class="avatar" alt="avatar" src="https://i2-prod.mylondon.news//article18152052.ece/ALTERNATES/s1200b/0_Moana.jpg">
+            <%= kid.nickname %>
+          </li>
+        </ul>
+      <%# end %>
     <% end %>
-    <i class="fa-solid fa-circle-plus"></i>
+    </div>
+    <div>
+      <%= link_to new_kid_path do %>
+        <i class="fa-solid fa-circle-plus"></i>
+      <% end %>
+    </div>
   </div>
 </div>

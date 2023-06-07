@@ -1,8 +1,11 @@
 class KidsController < ApplicationController
-  before_action :set_kids, only: %i[destroy]
+  before_action :set_kids, only: %i[show destroy]
 
   def index
     @kids = Kid.all
+  end
+
+  def show
   end
 
   def new
@@ -20,6 +23,14 @@ class KidsController < ApplicationController
     else
       render :new, status: :unprocessable_entity
     end
+  end
+
+  def edit
+  end
+
+  def update
+    @kid.update(kid_params)
+    redirect_to kid_path(@kid)
   end
 
   def destroy
