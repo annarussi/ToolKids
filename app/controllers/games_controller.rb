@@ -17,7 +17,11 @@ class GamesController < ApplicationController
     @game.completed = true
     @game.kid.total_score += 1
     @game.save
-    redirect_to kid_games_path(@kid)
+
+    respond_to do |format|
+        format.json { head :ok }
+        format.html { head :ok }
+    end
   end
 
   private
