@@ -37,7 +37,7 @@ avatar3.photo.attach(io: file, filename: "mogli.jpg", content_type: "image/jpg")
 avatar4 = Avatar.new(name: "tarzan")
 avatar4.save!
 
-file = URI.open("https://i.pinimg.com/564x/36/42/6d/36426d0c1c186e3c0adece9416dad6ef.jpg")
+file = URI.open("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8CQc-dNUpP3byOSYxo9Hx1hxHLpRg1OmyAQ&usqp=CAU")
 avatar4.photo.attach(io: file, filename: "tarzan.jpg", content_type: "image/jpg")
 
 puts "Creating users..."
