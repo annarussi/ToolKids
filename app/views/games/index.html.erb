@@ -1,24 +1,17 @@
 <div class="map">
   <div class="games container text-center py-5">
-    <% game1 = @games[0] %>
-    <% game2 = @games[1] %>
-    <% game3 = @games[2] %>
-    <% game4 = @games[3] %>
-    <%= link_to lecture_kid_game_path(game1.kid, game1), id: "game1" do %>
-      <p id="game1-title"> colors </p>
-      <i class="fa-solid fa-palette fa-bounce fa-2xl"></i>
-    <% end %>
-    <%= link_to lecture_kid_game_path(game2.kid, game2), id: "game2" do %>
-      <p id="game2-title"> animals </p>
-      <i class="fa-solid fa-hippo fa-2xl"></i>
-    <% end %>
-    <%= link_to lecture_kid_game_path(game3.kid, game3), id: "game3" do %>
-      <p id="game3-title"> objects </p>
-      <i class="fa-solid fa-shapes fa-2xl"></i>
-    <% end %>
-    <%= link_to lecture_kid_game_path(game4.kid, game4), id: "game4" do %>
-      <p id="game4-title"> sounds </p>
-      <i class="fa-solid fa-music fa-2xl"></i>
+
+    <% @games.each do |game| %>
+
+      <% if game.completed %>
+        <%= link_to lecture_kid_game_path(game.kid, game), id: "game#{game.id}" do %>
+          <%= image_tag "treasure-open.png", alt: "chest-open", width: 50 %>
+        <% end %>
+      <% else %>
+        <%= link_to "#", id: "game#{game.id}" do %>
+          <%= image_tag "treasure-closed.png", alt: "chest closed", width: 50 %>
+        <% end %>
+      <% end %>
     <% end %>
   </div>
 </div>
