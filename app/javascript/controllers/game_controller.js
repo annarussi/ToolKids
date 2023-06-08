@@ -1,5 +1,6 @@
 import { Controller } from "@hotwired/stimulus"
 import { Turbo } from "@hotwired/turbo-rails";
+import { SingleEntryPlugin } from "webpack";
 
 
 // Connects to data-controller="game"
@@ -20,20 +21,15 @@ export default class extends Controller {
     this.winTarget.play()
     const kidId = this.kidIdTarget.innerText.trim();
     const gameId = this.gameIdTarget.innerText.trim();
+
     fetch(`/kids/${kidId}/games/${gameId}/completed`, {
       method: "PATCH",
       headers: {"Content-Type": "application/json"}
     }).then(response => {
       if (response.ok) {
-        // Redirecionamento para outra view
-        Turbo.visit(`/kids/${kidId}/games`);
+      // Redirecionamento para outra view
+      Turbo.visit(`/kids/${kidId}/games`);
     }});
-    //   } else {
-    //     // Lógica de tratamento de erro, se necessário
-    //   }
-    // }).catch(error => {
-    //   // Lógica de tratamento de erro, se necessário
-    // });
   }
 
   playAzul() {
