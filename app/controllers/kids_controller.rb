@@ -26,6 +26,7 @@ class KidsController < ApplicationController
   end
 
   def edit
+    @avatars = Avatar.all
   end
 
   def update
