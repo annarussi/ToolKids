@@ -15,9 +15,15 @@ class GamesController < ApplicationController
 
   def completed
     @game.completed = true
-    @game.kid.total_score += 1
+    new_score = @game.kid.total_score
+    @kid.total_score = new_score +=1
+    @kid.save
     @game.save
-    redirect_to kid_games_path(@kid)
+
+    respond_to do |format|
+        format.json { head :ok }
+        format.html { head :ok }
+    end
   end
 
   private
