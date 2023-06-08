@@ -7,8 +7,12 @@
 
   <div class="row">
     <% @avatars.each do |avatar| %>
+      <div class="d-none" data-avatar-target="avatarId">
+        <%= avatar.id %>
+      </div>
+
       <div class="col-6 d-flex-column">
-        <%= cl_image_tag avatar.photo.key, class:"avatar shadow avatar-edit mx-4" %>
+        <%= cl_image_tag avatar.photo.key, class:"avatar shadow avatar-edit mx-4"  %>
         <h2 class="avatar-edit text-center"><%= avatar.name %></h2>
       </div>
     <% end %>
