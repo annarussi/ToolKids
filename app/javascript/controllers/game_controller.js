@@ -1,4 +1,6 @@
 import { Controller } from "@hotwired/stimulus"
+import { Turbo } from "@hotwired/turbo-rails";
+import { SingleEntryPlugin } from "webpack";
 
 
 // Connects to data-controller="game"
@@ -15,28 +17,21 @@ export default class extends Controller {
     this.vermelhoTarget.play()
   }
 
-  playWin(){
+  playWin() {
     this.winTarget.play()
     const kidId = this.kidIdTarget.innerText.trim();
     const gameId = this.gameIdTarget.innerText.trim();
-    fetch(`/kids/${kidId}/games/${gameId}/completed`, {
-      method: "PATCH",
-      headers: {"Content-Type": "application/json"}
-    })
-    // console.log(this.gameIdTarget.innerText)
-    // console.log(this.kidIdTarget.innerText)
-    // Rails.ajax({
-    //     type: 'PATCH',
-    //     url: `/kids/${this.kidIdTarget.innerText}/games/${this.gameIdTarget.innerText}`,
-    //     data: { game: { completed: true } },
-    //     dataType: 'json',
-    //     success: function () {
-    //       console.log('Objeto game atualizado com sucesso.');
-    //     },
-    //     error: function (xhr, status, error) {
-    //       console.error(error);
-    //     }
-    //  })
+    
+      fetch(`/kids/${kidId}/games/${gameId}/completed`, {
+        method: "PATCH",
+        headers: {"Content-Type": "application/json"}
+      }).then(response => {
+        if (response.ok) {
+        // Redirecionamento para outra view
+        Turbo.visit(`/kids/${kidId}/games`);
+      }})
+
+
   }
 
   playAzul() {

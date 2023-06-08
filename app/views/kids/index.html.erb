@@ -8,17 +8,14 @@
     <% @kids.each do |kid| %>
       <%= link_to  kid_games_path(kid), class:"text-decoration-none" do %>
         <div class="m-5 kids-card">
-          <img class="avatar shadow" alt="avatar" src="https://i2-prod.mylondon.news//article18152052.ece/ALTERNATES/s1200b/0_Moana.jpg">
+        <%= cl_image_tag kid.avatar.photo.key, class:"avatar shadow" %>
+          <%# <img class="avatar shadow" alt="avatar" src="https://i2-prod.mylondon.news//article18152052.ece/ALTERNATES/s1200b/0_Moana.jpg"> %>
           <h2 class="my-1"><strong><%= kid.nickname %></strong></h2>
         </div>
       <% end %>
     <% end %>
 
-
-  <%= link_to "Add more kids", new_kid_path, class:"add-icon text-decoration-none" %>
-    <%# <div class="add-icon">
-       <i class="fa-solid fa-circle-plus"></i>
-    </div>
-     <% end %>
-
+<footer>
+    <%= link_to "add another kid", new_kid_path, class:"add-icon text-decoration-none" %>
+</footer>
 </div>
