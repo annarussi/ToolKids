@@ -1,5 +1,5 @@
 import { Controller } from "@hotwired/stimulus"
-import Rails  from "@rails/ujs"
+
 
 // Connects to data-controller="game"
 export default class extends Controller {
@@ -17,20 +17,26 @@ export default class extends Controller {
 
   playWin(){
     this.winTarget.play()
-    console.log(this.gameIdTarget.innerText)
-    console.log(this.kidIdTarget.innerText)
-    Rails.ajax({
-        type: 'PATCH',
-        url: `/kids/${this.kidIdTarget.innerText}/games/${this.gameIdTarget.innerText}`,
-        data: { game: { completed: true } },
-        dataType: 'json',
-        success: function () {
-          console.log('Objeto game atualizado com sucesso.');
-        },
-        error: function (xhr, status, error) {
-          console.error(error);
-        }
-     })
+    const kidId = this.kidIdTarget.innerText.trim();
+    const gameId = this.gameIdTarget.innerText.trim();
+    fetch(`/kids/${kidId}/games/${gameId}/completed`, {
+      method: "PATCH",
+      headers: {"Content-Type": "application/json"}
+    })
+    // console.log(this.gameIdTarget.innerText)
+    // console.log(this.kidIdTarget.innerText)
+    // Rails.ajax({
+    //     type: 'PATCH',
+    //     url: `/kids/${this.kidIdTarget.innerText}/games/${this.gameIdTarget.innerText}`,
+    //     data: { game: { completed: true } },
+    //     dataType: 'json',
+    //     success: function () {
+    //       console.log('Objeto game atualizado com sucesso.');
+    //     },
+    //     error: function (xhr, status, error) {
+    //       console.error(error);
+    //     }
+    //  })
   }
 
   playAzul() {

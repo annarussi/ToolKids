@@ -1,6 +1,7 @@
 class GamesController < ApplicationController
   before_action :set_game, only: %i[show lecture completed]
-  before_action :set_kid, only: %i[lecture]
+  before_action :set_kid, only: %i[lecture completed]
+  protect_from_forgery with: :null_session
 
   def index
     @games = Game.all
@@ -15,6 +16,7 @@ class GamesController < ApplicationController
   def completed
     @game.completed = true
     @game.save
+    redirect_to kid_games_path(@kid)
   end
 
   private
