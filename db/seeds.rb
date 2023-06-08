@@ -20,25 +20,25 @@ avatar1 = Avatar.new(name: "moana")
 avatar1.save!
 
 file = URI.open("https://i2-prod.mylondon.news//article18152052.ece/ALTERNATES/s1200b/0_Moana.jpg")
-avatar1.photos.attach(io: file, filename: "moana.jpg", content_type: "image/jpg")
+avatar1.photo.attach(io: file, filename: "moana.jpg", content_type: "image/jpg")
 
 avatar2 = Avatar.new(name: "pocahontas")
 avatar2.save!
 
 file = URI.open("https://disneyplusbrasil.com.br/wp-content/uploads/2022/12/Pocahontas-Disney-Plus.jpg")
-avatar2.photos.attach(io: file, filename: "pocahontas.jpg", content_type: "image/jpg")
+avatar2.photo.attach(io: file, filename: "pocahontas.jpg", content_type: "image/jpg")
 
 avatar3 = Avatar.new(name: "mogli")
 avatar3.save!
 
 file = URI.open("https://akamai.sscdn.co/uploadfile/letras/fotos/0/e/7/d/0e7d7217fa288dfa95b4489344196ecd.jpg")
-avatar3.photos.attach(io: file, filename: "mogli.jpg", content_type: "image/jpg")
+avatar3.photo.attach(io: file, filename: "mogli.jpg", content_type: "image/jpg")
 
 avatar4 = Avatar.new(name: "tarzan")
 avatar4.save!
 
 file = URI.open("https://i.pinimg.com/564x/36/42/6d/36426d0c1c186e3c0adece9416dad6ef.jpg")
-avatar4.photos.attach(io: file, filename: "tarzan.jpg", content_type: "image/jpg")
+avatar4.photo.attach(io: file, filename: "tarzan.jpg", content_type: "image/jpg")
 
 puts "Creating users..."
 
