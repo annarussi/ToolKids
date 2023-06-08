@@ -29,8 +29,17 @@ kid2.save!
 game1 = Game.new(name: "colors", level: 1, kid: kid1)
 game1.save!
 
-file = URI.open("https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Solid_blue.svg/2500px-Solid_blue.svg.png")
+file = URI.open("https://res.cloudinary.com/dhku8hlz9/image/upload/v1686224730/ci66vxhb0wpbexursb6m.png")
 game1.photos.attach(io: file, filename: "blue.png", content_type: "image/png")
+
+file = URI.open("https://res.cloudinary.com/dhku8hlz9/image/upload/v1686224762/vs3k9plgsh2cclepgze8.png")
+game1.photos.attach(io: file, filename: "yellow.png", content_type: "image/png")
+
+file = URI.open("https://res.cloudinary.com/dhku8hlz9/image/upload/v1686224779/pusmec8ipokomlwmmxqc.png")
+game1.photos.attach(io: file, filename: "green.png", content_type: "image/png")
+
+file = URI.open("https://res.cloudinary.com/dhku8hlz9/image/upload/v1686224795/y7dxvwjwh6j1xfsks1iw.png")
+game1.photos.attach(io: file, filename: "red.png", content_type: "image/png")
 
 puts "No problem in cloudinary"
 

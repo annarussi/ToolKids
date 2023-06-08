@@ -26,12 +26,12 @@
 
       <div class="card col-4 mx-2" data-action="click->game#playAzul">
         <audio src="<%= audio_path 'azul.mp3' %>" data-game-target="azul"></audio>
-            
+          <%= cl_image_tag @game.photos[0].key %>
       </div>
 
       <div class="card col-4" data-action="click->game#playAmarelo">
         <audio src="<%= audio_path 'amarelo.mp3' %>" data-game-target="amarelo"></audio>
-          <%= image_tag ("yellow") %>
+          <%= cl_image_tag @game.photos[1].key %>
       </div>
 
     </div>
@@ -40,7 +40,7 @@
 
       <div class="card col-4 mx-2" data-action="click->game#playVerde">
         <audio src="<%= audio_path 'verde.mp3' %>" data-game-target="verde"></audio>
-          <%= image_tag ("green") %>
+          <%= cl_image_tag @game.photos[2].key %>
       </div>
 
 
@@ -48,7 +48,7 @@
       <div class="card col-4" data-action="click->game#playWin">
 
         <audio src="<%=audio_path 'vermelho_win.mp3' %>" data-game-target="win"></audio>
-          <%= image_tag ("red") %>
+          <%= cl_image_tag @game.photos[3].key %>
       </div>
 
     </div>
