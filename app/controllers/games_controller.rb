@@ -24,6 +24,7 @@ class GamesController < ApplicationController
         format.json { head :ok }
         format.html { head :ok }
     end
+
   end
 
   private
