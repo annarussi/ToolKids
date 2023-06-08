@@ -16,10 +16,10 @@ class KidsController < ApplicationController
     @kid = Kid.new(kid_params)
     @kid.user = current_user
     # We have to update the avatar for the real one
-    @kid.avatar = Avatar.new(name: "moana")
+    @kid.avatar = Avatar.last
 
     if @kid.save
-      redirect_to kids_path
+      redirect_to edit_kid_path(@kid)
     else
       render :new, status: :unprocessable_entity
     end
