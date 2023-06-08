@@ -1,6 +1,27 @@
-
-<div class="card-user text-center">
-  <img class="avatar" alt="avatar" src="https://i2-prod.mylondon.news//article18152052.ece/ALTERNATES/s1200b/0_Moana.jpg">
-  <%= link_to "Change avatar", kid_path, class:"text-decoration-none" %>
-  <%= @kid.nickname %>
+<div>
+  <div class="card-profile text-center">
+    <img class="avatar" alt="avatar" src="https://i2-prod.mylondon.news//article18152052.ece/ALTERNATES/s1200b/0_Moana.jpg">
+    <%= link_to "Change avatar", edit_kid_path, class:"text-decoration-none" %>
+    <%= @kid.nickname %>
+  </div>
+  <div class= "row">
+    <div class="text-align-center">
+      <div class="card-level">
+        <h1><strong>Level 1<strong></h1>
+        <hr>
+        <div class="d-flex-column align-item-center justify-content-center text-align-cener">
+          <h3>Map completion</h3>
+          <i id= "full-star" class="fa-solid fa-star"></i>
+          <i id= "empty-star" class="fa-regular fa-star"></i>
+          <i id= "empty-star" class="fa-regular fa-star"></i>
+          <i id= "empty-star" class="fa-regular fa-star"></i>
+        </div>
+      </div>
+      <div class="card-level">
+        <h1><strong>Your Treasure<strong></h1>
+        <hr>
+        <h3>Stars</h3>
+      </div>
+    </div>
+  </div>
 </div>
