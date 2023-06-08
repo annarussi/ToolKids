@@ -1,7 +1,7 @@
-<div class="container">
+<div class="container new-kid-form">
     <%= simple_form_for @kid do |f| %>
     <%= f.input :nickname, :label => 'nickname' %>
     <%= f.input :age, as: :integer %>
-    <%= f.button :submit, "Let's play!", class:"btn btn-brown" %>
+    <%= f.button :submit, "Let's play!", class:"form-btn" %>
   <% end %>
 </div>
