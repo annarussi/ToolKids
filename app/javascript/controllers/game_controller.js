@@ -1,5 +1,5 @@
 import { Controller } from "@hotwired/stimulus"
-import Rails  from "@rails/ujs"
+
 
 // Connects to data-controller="game"
 export default class extends Controller {
