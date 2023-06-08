@@ -31,8 +31,8 @@ avatar2.photos.attach(io: file, filename: "pocahontas.jpg", content_type: "image
 avatar3 = Avatar.new(name: "mogli")
 avatar3.save!
 
-file = URI.open("https://static.wikia.nocookie.net/disney/images/d/d4/Mowgli1.png/revision/latest?cb=20201204130223&path-prefix=pt-br")
-avatar3.photos.attach(io: file, filename: "blue.png", content_type: "image/png")
+file = URI.open("https://akamai.sscdn.co/uploadfile/letras/fotos/0/e/7/d/0e7d7217fa288dfa95b4489344196ecd.jpg")
+avatar3.photos.attach(io: file, filename: "mogli.jpg", content_type: "image/jpg")
 
 avatar4 = Avatar.new(name: "tarzan")
 avatar4.save!
