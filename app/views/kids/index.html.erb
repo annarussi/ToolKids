@@ -1,24 +1,24 @@
 <div class="container text-center">
+
   <div>
-    <h1>Who is learning?</h1>
+    <h1><strong>Who is ready to play?</strong></h1>
   </div>
-  <div class="row">
+
+
     <% @kids.each do |kid| %>
-    <div class="d-flex-column justify-content-center my-5">
-      <%#= link_to kid_path(kid), class:"text-decoration-none" do %>
-        <ul class="text-center align-items-center" type="none">
-          <li>
-            <img class="avatar" alt="avatar" src="https://i2-prod.mylondon.news//article18152052.ece/ALTERNATES/s1200b/0_Moana.jpg">
-            <%= kid.nickname %>
-          </li>
-        </ul>
-      <%# end %>
-    <% end %>
-    </div>
-    <div>
-      <%= link_to new_kid_path do %>
-        <i class="fa-solid fa-circle-plus"></i>
+      <%= link_to  kid_games_path(kid), class:"text-decoration-none" do %>
+        <div class="m-5 kids-card">
+          <img class="avatar shadow" alt="avatar" src="https://i2-prod.mylondon.news//article18152052.ece/ALTERNATES/s1200b/0_Moana.jpg">
+          <h2 class="my-1"><strong><%= kid.nickname %></strong></h2>
+        </div>
       <% end %>
+    <% end %>
+
+
+  <%= link_to "Add more kids", new_kid_path, class:"add-icon text-decoration-none" %>
+    <%# <div class="add-icon">
+       <i class="fa-solid fa-circle-plus"></i>
     </div>
-  </div>
+     <% end %>
+
 </div>
