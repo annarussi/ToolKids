@@ -6,7 +6,8 @@
     <% @games.each do |game| %>
 
       <% if game.completed %>
-        <%= link_to lecture_kid_game_path(game.kid, game), id: "game#{game.id}" do %>
+        <%# link_to lecture_kid_game_path(game.kid, game), id: "game#{game.id}" do %>
+        <%= link_to kid_game_path(@kid, game), id: "game#{game.id}" do %>
           <%= image_tag "treasure-open.png", alt: "chest-open", width: 50 %>
         <% end %>
       <% else %>

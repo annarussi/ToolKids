@@ -1,9 +1,10 @@
-<div>
-  <div class="card-profile text-center">
+<%= render "shared/logo" %>
+
+<div class="card-profile kids-index">
     <img class="avatar" alt="avatar" src="https://i2-prod.mylondon.news//article18152052.ece/ALTERNATES/s1200b/0_Moana.jpg">
     <%= link_to "Change avatar", edit_kid_path, class:"text-decoration-none" %>
     <%= @kid.nickname %>
-  </div>
+</div>
   <div class= "row">
     <div class="text-align-center">
       <div class="card-level">
