@@ -55,14 +55,14 @@ user2.save!
 
 puts "Creating kids..."
 
-kid1 = Kid.new(nickname: "lichi", age: 5, avatar: avatar1, user: user1)
+kid1 = Kid.new(nickname: "licinha", age: 5, avatar: avatar2, user: user1)
 kid1.save!
-kid2 = Kid.new(nickname: "naoki", age: 6, avatar: avatar1, user: user1)
+kid2 = Kid.new(nickname: "little_pirate", age: 4, avatar: avatar3, user: user1)
 kid2.save!
 
 puts "Creating games..."
 
-game1 = Game.new(name: "colors", level: 1, kid: kid1)
+game1 = Game.new(name: "colors", level: 1, kid: kid1, completed: true)
 game1.save!
 
 file = URI.open("https://res.cloudinary.com/dhku8hlz9/image/upload/v1686224730/ci66vxhb0wpbexursb6m.png")
