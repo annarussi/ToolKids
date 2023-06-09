@@ -18,11 +18,9 @@
 
     <hr>
 
-    <!-- fazer logout -->
     <%= link_to "Log Out", destroy_user_session_path, data: {turbo_method: :delete}, class:"sidebar-text" %>
   </div>
 
-  <!-- colocar foto avatar kid -->
   <span onclick="openNav()"><%= cl_image_tag kid.avatar.photo.key, class:"image-avatar" %></span>
 
 
