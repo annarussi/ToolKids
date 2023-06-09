@@ -3,8 +3,7 @@
   <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 
-    <%= kid.avatar %>
-    <%# image_tag "https://pbs.twimg.com/profile_images/1562907291233398784/KEMqxAGF_400x400.jpg", class:"image-sidebar" %>
+    <%= cl_image_tag kid.avatar.photo.key, class:"image-sidebar" %>
 
     <h1 class="sidebar-text"><%= kid.nickname %></h1><br>
 
@@ -24,7 +23,7 @@
   </div>
 
   <!-- colocar foto avatar kid -->
-  <span onclick="openNav()"><%= image_tag "https://pbs.twimg.com/profile_images/1562907291233398784/KEMqxAGF_400x400.jpg", class:"image-avatar" %></span>
+  <span onclick="openNav()"><%= cl_image_tag kid.avatar.photo.key, class:"image-avatar" %></span>
 
 
   <script>
