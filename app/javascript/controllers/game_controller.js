@@ -18,10 +18,12 @@ export default class extends Controller {
   }
 
   playWin() {
-    this.winTarget.play()
+
     const kidId = this.kidIdTarget.innerText.trim();
     const gameId = this.gameIdTarget.innerText.trim();
-    
+
+    this.winTarget.play()
+
       fetch(`/kids/${kidId}/games/${gameId}/completed`, {
         method: "PATCH",
         headers: {"Content-Type": "application/json"}
@@ -30,7 +32,6 @@ export default class extends Controller {
         // Redirecionamento para outra view
         Turbo.visit(`/kids/${kidId}/games`);
       }})
-
 
   }
 
