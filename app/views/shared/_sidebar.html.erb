@@ -1,0 +1,41 @@
+<div class="d-flex justify-content-between">
+
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+    <%= image_tag "https://pbs.twimg.com/profile_images/1562907291233398784/KEMqxAGF_400x400.jpg", class:"image-sidebar" %>
+    <!-- pegar nickname kid -->
+    <h1>Lichi</h1><br>
+
+    <h2>Level 1 🐀</h2>
+    <%= image_tag "progressbar.png", class:"progress-bar" %><br>
+
+    <!-- path errado dos dois links, redirecionar com variáveis -->
+    <%= link_to "Profile", kids_path %>
+
+    <a href=""><%= link_to "My map", kids_path %></a>
+    <hr>
+
+    <!-- fazer logout -->
+    <a href="#">Log Out</a>
+  </div>
+
+  <!-- colocar foto avatar kid -->
+  <span onclick="openNav()"><%= image_tag "https://pbs.twimg.com/profile_images/1562907291233398784/KEMqxAGF_400x400.jpg", class:"image-avatar" %></span>
+
+  <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+
+  <script>
+  function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+  }
+
+
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+  }
+  </script>
+
+  <%= image_tag "log.png", class:"image-logo"%>
+
+</div>

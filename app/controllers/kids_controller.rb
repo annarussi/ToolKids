@@ -40,6 +40,8 @@ class KidsController < ApplicationController
   end
 
 
+
+
   private
 
   def kid_params
