@@ -1,23 +1,39 @@
 <%= render "shared/sidebar", kid: @kid %>
 
 <div class="container" data-controller="avatar">
-  <h1 class="text-center">Choose Your Avatar</h1>
-  <div class="card-user text-center">
+   <div class="d-none" data-avatar-target="kidId">
+    <%= @kid.id %>
+  </div>
+
+  <h1 class="text-center my-4">Choose your avatar, <%= @kid.nickname %>! </h1>
+
+  <div class="my-5 d-flex justify-content-center align-items-center">
     <%= cl_image_tag @kid.avatar.photo.key, class:"avatar shadow" %>
-    <%= @kid.nickname %>
   </div>
 
-  <div class="row">
-    <% @avatars.each do |avatar| %>
-      <div class="d-none" data-avatar-target="avatarId">
-        <%= avatar.id %>
+
+    <div class="row">
+      <div class="col-6" data-action="click->avatar#moanaAvatar">
+        <%= cl_image_tag @avatars[0].photo.key, class:"avatar shadow avatar-edit mx-4"  %>
+        <h2 class="avatar-edit text-center"><%= @avatars[0].name %></h2>
       </div>
 
-      <div class="col-6 d-flex-column">
-        <%= cl_image_tag avatar.photo.key, class:"avatar shadow avatar-edit mx-4"  %>
-        <h2 class="avatar-edit text-center"><%= avatar.name %></h2>
+      <div class="col-6" data-action="click->avatar#pocahontasAvatar">
+        <%= cl_image_tag @avatars[1].photo.key, class:"avatar shadow avatar-edit mx-4"  %>
+        <h2 class="avatar-edit text-center"><%= @avatars[1].name %></h2>
       </div>
-    <% end %>
-  </div>
+    </div>
 
+
+    <div class="row">
+      <div class="col-6" data-action="click->avatar#mogliAvatar">
+        <%= cl_image_tag @avatars[2].photo.key, class:"avatar shadow avatar-edit mx-4"  %>
+        <h2 class="avatar-edit text-center"><%= @avatars[2].name %></h2>
+      </div>
+
+      <div class="col-6" data-action="click->avatar#tarzanAvatar">
+        <%= cl_image_tag @avatars[3].photo.key, class:"avatar shadow avatar-edit mx-4"  %>
+        <h2 class="avatar-edit text-center"><%= @avatars[3].name %></h2>
+      </div>
+    </div>
 </div>
