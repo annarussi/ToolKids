@@ -1,6 +1,6 @@
 import { Controller } from "@hotwired/stimulus"
 import { Turbo } from "@hotwired/turbo-rails";
-import { SingleEntryPlugin } from "webpack";
+
 
 
 // Connects to data-controller="game"

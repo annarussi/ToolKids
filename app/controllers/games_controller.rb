@@ -16,14 +16,14 @@ class GamesController < ApplicationController
   def completed
     @game.completed = true
     new_score = @game.kid.total_score
-    @kid.total_score = new_score +=1
+    @kid.total_score = new_score += 1
     @kid.save
     @game.save
 
     sleep(5)
     respond_to do |format|
-        format.json { head :ok }
-        format.html { head :ok }
+      format.json { head :ok }
+      format.html { head :ok }
     end
 
   end
