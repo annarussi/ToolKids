@@ -20,6 +20,7 @@ class GamesController < ApplicationController
     @kid.save
     @game.save
 
+    sleep(5)
     respond_to do |format|
       format.json { head :ok }
       format.html { head :ok }

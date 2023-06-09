@@ -17,19 +17,21 @@ export default class extends Controller {
     this.vermelhoTarget.play()
   }
 
-  playWin(){
+  playWin() {
     this.winTarget.play()
     const kidId = this.kidIdTarget.innerText.trim();
     const gameId = this.gameIdTarget.innerText.trim();
+    
+      fetch(`/kids/${kidId}/games/${gameId}/completed`, {
+        method: "PATCH",
+        headers: {"Content-Type": "application/json"}
+      }).then(response => {
+        if (response.ok) {
+        // Redirecionamento para outra view
+        Turbo.visit(`/kids/${kidId}/games`);
+      }})
 
-    fetch(`/kids/${kidId}/games/${gameId}/completed`, {
-      method: "PATCH",
-      headers: {"Content-Type": "application/json"}
-    }).then(response => {
-      if (response.ok) {
-      // Redirecionamento para outra view
-      Turbo.visit(`/kids/${kidId}/games`);
-    }});
+
   }
 
   playAzul() {

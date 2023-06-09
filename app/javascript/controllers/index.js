@@ -4,6 +4,9 @@
 
 import { application } from "./application"
 
+import AvatarController from "./avatar_controller"
+application.register("avatar", AvatarController)
+
 import GameController from "./game_controller"
 application.register("game", GameController)
 
