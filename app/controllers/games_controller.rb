@@ -1,6 +1,6 @@
 class GamesController < ApplicationController
   before_action :set_game, only: %i[show lecture completed]
-  before_action :set_kid, only: %i[lecture completed]
+  before_action :set_kid, only: %i[lecture completed index show]
   protect_from_forgery with: :null_session
 
   def index

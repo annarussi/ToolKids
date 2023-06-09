@@ -13,13 +13,14 @@
 }
 
 /* The navigation menu links */
-.sidenav h1, h2 {
-  padding: 8px 8px 8px 32px;
+.sidebar-text {
+  padding: 8px 8px 8px 8px;
   text-decoration: none;
   font-size: 25px;
   color: white;
   display: block;
   transition: 0.3s;
+  text-align: center;
 }
 
 /* Position and style the close button (top right corner) */
@@ -29,6 +30,8 @@
   right: 25px;
   font-size: 36px;
   margin-left: 50px;
+  color: white;
+  text-decoration: none;
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
@@ -39,7 +42,8 @@
 
 .image-avatar {
   border-radius: 50%;
-  width: 80px;
+  width: 90px;
+  height: 90px;
   margin: 20px;
   margin-bottom: 10px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, #FFC30D 0px 0px 0px 3px;
@@ -50,7 +54,8 @@
   margin-left: auto;
   margin-right: auto;
   border-radius: 50%;
-  width: 60px;
+  width: 70px;
+  height: 70px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, #FFC30D 0px 0px 0px 3px;
 }
 
@@ -59,11 +64,6 @@
   height: 100px;
   padding-top: 20px;
   padding-right: 20px;
-}
-
-h1,h2 {
-  color: white;
-  text-align: center;
 }
 
 .progress-bar {
