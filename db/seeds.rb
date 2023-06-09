@@ -40,11 +40,11 @@ avatar4.save!
 file = URI.open("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8CQc-dNUpP3byOSYxo9Hx1hxHLpRg1OmyAQ&usqp=CAU")
 avatar4.photo.attach(io: file, filename: "tarzan.jpg", content_type: "image/jpg")
 
-avatar4 = Avatar.new(name: "default")
-avatar4.save!
+avatar5 = Avatar.new(name: "default")
+avatar5.save!
 
 file = URI.open("https://icon-library.com/images/no-image-icon/no-image-icon-0.jpg")
-avatar4.photo.attach(io: file, filename: "default.jpg", content_type: "image/jpg")
+avatar5.photo.attach(io: file, filename: "default.jpg", content_type: "image/jpg")
 
 puts "Creating users..."
 

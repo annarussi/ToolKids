@@ -1,5 +1,6 @@
 class KidsController < ApplicationController
-  before_action :set_kids, only: %i[show destroy edit]
+  before_action :set_kids, only: %i[show destroy edit moana_avatar pocahontas_avatar mogli_avatar tarzan_avatar]
+  protect_from_forgery with: :null_session
 
   def index
     @kids = Kid.all
@@ -27,6 +28,50 @@ class KidsController < ApplicationController
 
   def edit
     @avatars = Avatar.all
+  end
+
+  def moana_avatar
+    avatar = Avatar.find_by(name: "moana")
+    @kid.avatar = avatar
+    @kid.save
+
+    respond_to do |format|
+      format.json { head :ok }
+      format.html { head :ok }
+    end
+  end
+
+  def pocahontas_avatar
+    avatar = Avatar.find_by(name: "pocahontas")
+    @kid.avatar = avatar
+    @kid.save
+
+    respond_to do |format|
+      format.json { head :ok }
+      format.html { head :ok }
+    end
+  end
+
+  def mogli_avatar
+    avatar = Avatar.find_by(name: "mogli")
+    @kid.avatar = avatar
+    @kid.save
+
+    respond_to do |format|
+      format.json { head :ok }
+      format.html { head :ok }
+    end
+  end
+
+  def tarzan_avatar
+    avatar = Avatar.find_by(name: "tarzan")
+    @kid.avatar = avatar
+    @kid.save
+
+    respond_to do |format|
+      format.json { head :ok }
+      format.html { head :ok }
+    end
   end
 
   def update
