@@ -44,7 +44,7 @@ avatar5 = Avatar.new(name: "default")
 avatar5.save!
 
 file = URI.open("https://icon-library.com/images/no-image-icon/no-image-icon-0.jpg")
-avatar4.photo.attach(io: file, filename: "default.jpg", content_type: "image/jpg")
+avatar5.photo.attach(io: file, filename: "default.jpg", content_type: "image/jpg")
 
 puts "Creating users..."
 
