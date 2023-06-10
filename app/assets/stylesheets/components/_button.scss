@@ -17,6 +17,20 @@
   text-decoration: none;
 }
 
+.trash-icon {
+  color: #b4914c;
+  font-size: 18px;
+  margin-top: 15px;
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+
+.delete-btn {
+  width: 200px;
+  height: 50px;
+  margin: 25px auto;
+}
+
 .form-btn {
   padding: 10px 10px;
   background-color: #b4914c;
@@ -27,4 +41,8 @@
   color: #f0dcb4;
   font-weight: bold;
   margin-top: 60px;
+}
+
+a {
+  text-decoration: none;
 }

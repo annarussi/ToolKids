@@ -3,17 +3,22 @@
 <div class="container kids-index">
 
   <div>
-    <h1><strong>Who is ready to play?</strong></h1>
+    <h1 class="my-5"><strong>Who is ready to play?</strong></h1>
   </div>
 
 
     <% @kids.each do |kid| %>
-      <%= link_to  kid_games_path(kid), class:"text-decoration-none" do %>
-        <div class="m-5 kids-card">
+     <div class=" kids-card">
+        <%= link_to  kid_games_path(kid), class:"text-decoration-none" do %>
           <%= cl_image_tag kid.avatar.photo.key, class:"avatar shadow" %>
-          <h2 class="my-1"><strong><%= kid.nickname %></strong></h2>
-        </div>
+        <% end %>
+        <h2 class="my-1"><strong><%= kid.nickname %></i></strong></h2>
+      </div>
+
+      <%= link_to kid_path(kid), data: { turbo_method: :delete, turbo_confirm: "Are you sure you don't wanna play anymore?" }, class:"border d-flex justify-content-center align-items-center delete-btn" do %>
+          <i class="fa-solid fa-trash-can trash-icon"></i><p class="trash-icon"> Delete this player</p>
       <% end %>
+
     <% end %>
 
   <footer>
