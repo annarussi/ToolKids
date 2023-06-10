@@ -17,6 +17,8 @@
     <% end %>
 
   <footer>
-      <%= link_to "add another kid", new_kid_path, class:"add-icon text-decoration-none" %>
+      <%= link_to new_kid_path do%>
+        <i class="fa-solid fa-circle-plus add-icon"></i>
+      <% end %>
   </footer>
 </div>
