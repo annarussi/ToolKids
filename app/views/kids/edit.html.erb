@@ -5,7 +5,9 @@
     <%= @kid.id %>
   </div>
 
-  <h1 class="text-center my-4">Choose your avatar, <%= @kid.nickname.capitalize %>! </h1>
+  <h1 class="text-center my-4">
+    Choose your avatar, <%= @kid.nickname.capitalize %>!
+  </h1>
 
     <div class="row my-5">
       <div class="col-6" data-action="click->avatar#moanaAvatar">
@@ -31,4 +33,7 @@
         <h2 class="avatar-edit text-center"><%= @avatars[3].name %></h2>
       </div>
     </div>
+  <br>
+  <br>
+  <%= link_to "Let's play!", kid_games_path(@kid), class:"btn-brown" %>
 </div>

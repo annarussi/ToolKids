@@ -5,17 +5,15 @@
 
     <% @games.each do |game| %>
 
-      <% if game.completed %>
-
+      <% if @kid.total_score + 1 == game.level %>
         <%# link_to lecture_kid_game_path(game.kid, game), id: "game#{game.id}" do %>
         <%= link_to kid_game_path(@kid, game), id: "game#{game.name}" do %>
           <%= image_tag "treasure-open.png", alt: "chest-open", width: 50 %>
         <% end %>
       <% else %>
-        <%= link_to "#", id: "game#{game.name}" do %>
-          <%= image_tag "treasure-closed.png", alt: "chest closed", width: 50 %>
-        <% end %>
+          <%= image_tag "treasure-closed.png", alt: "chest closed", id: "game#{game.name}", width: 50 %>
       <% end %>
+
     <% end %>
   </div>
 </div>

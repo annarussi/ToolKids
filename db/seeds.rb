@@ -84,7 +84,7 @@ game2 = Game.new(name: "animals", level: 1, kid: kid1)
 game2.save!
 game3 = Game.new(name: "objects", level: 2, kid: kid2)
 game3.save!
-game4 = Game.new(name: "sounds", level: 2, kid: kid2)
+game4 = Game.new(name: "verbs", level: 2, kid: kid2)
 game4.save!
 
 puts "All done!"
