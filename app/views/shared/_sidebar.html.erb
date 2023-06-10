@@ -10,6 +10,7 @@
     <h2 class="sidebar-text">Level 1 🐀</h2>
     <%= image_tag "progressbar.png", class:"progress-bar" %><br>
 
+    <hr>
 
     <h2><%= link_to "Profile", kid_path(kid), class:"sidebar-text" %></h2>
 
@@ -17,10 +18,14 @@
 
     <h1><%= link_to "Change avatar", edit_kid_path(kid), class:"sidebar-text" %></h1>
 
+    <hr>
+
+    <h1><%= link_to "Go to another player", kids_path(kid), class:"sidebar-text" %></h1>
+
 
     <hr>
 
-    <%= link_to "Log Out", destroy_user_session_path, data: {turbo_method: :delete}, class:"sidebar-text" %>
+
   </div>
 
   <span onclick="openNav()"><%= cl_image_tag kid.avatar.photo.key, class:"image-avatar" %></span>

@@ -23,13 +23,13 @@ class KidsController < ApplicationController
     # Give an avatar for the kid
     @kid.avatar = Avatar.last
     if @kid.save
-      # Create the Color game for the kid
+      # call the method to create the Color game for the kid
       game_colors
-      # Create the Animal game for the kid
+      # call the method to create the Animal game for the kid
       game_animals
-      # Create the Objects game for the kid
+      # call the method to create the Objects game for the kid
       game_objects
-      # Create the Verbs game for the kid
+      # call the method to create the Verbs game for the kid
       game_verbs
       # redirect to choose the avatar
       redirect_to edit_kid_path(@kid)
