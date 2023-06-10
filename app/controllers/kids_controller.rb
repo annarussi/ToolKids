@@ -3,7 +3,7 @@ class KidsController < ApplicationController
   protect_from_forgery with: :null_session
 
   def index
-    @kids = Kid.all
+    @kids = current_user.kids
   end
 
   def show
@@ -80,7 +80,7 @@ class KidsController < ApplicationController
   end
 
   def destroy
-    @kid = Kid.destroy
+    @kid.destroy
     redirect_to kids_path
   end
 
