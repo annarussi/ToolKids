@@ -1,14 +1,13 @@
 
-<%= render "shared/logo" %>
+<%= render "shared/sidebar", kid: @kid %>
 <div>
   <div class="card-profile">
-    <%= cl_image_tag @kid.avatar.photo.key, class:"avatar shadow" %>
-    <%= link_to "Change avatar", edit_kid_path, class:"text-decoration-none" %>
-    <%= @kid.nickname %>
+    <h3><%= @kid.nickname %></h3>
+    <h4>score: <%= @kid.total_score %></h4>
   </div>
   <div class="card-level">
     <div>
-      <h1><strong>Level 1<strong></h1>
+      <h1><strong>Level <%= @kid.total_score + 1 %><strong></h1>
       <hr>
       <h3>Map completion</h3>
       <i id= "full-star" class="fa-solid fa-star"></i>
