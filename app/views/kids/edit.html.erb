@@ -7,11 +7,6 @@
 
   <h1 class="text-center my-4">Choose your avatar, <%= @kid.nickname.capitalize %>! </h1>
 
-  <div class="my-5 d-flex justify-content-center align-items-center">
-    <%= cl_image_tag @kid.avatar.photo.key, class:"avatar shadow" %>
-  </div>
-
-
     <div class="row my-5">
       <div class="col-6" data-action="click->avatar#moanaAvatar">
         <%= cl_image_tag @avatars[0].photo.key, class:"avatar shadow avatar-edit mx-4"  %>
@@ -23,7 +18,6 @@
         <h2 class="avatar-edit text-center"><%= @avatars[1].name.capitalize %></h2>
       </div>
     </div>
-
 
     <div class="row">
       <div class="col-6" data-action="click->avatar#mogliAvatar">
