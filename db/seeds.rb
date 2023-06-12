@@ -50,41 +50,5 @@ puts "Creating users..."
 
 user1 = User.new(email: "lishina@gmail.com", password: "123123", first_name: "Lishina", last_name: "Naoki")
 user1.save!
-user2 = User.new(email: "naoki@gmail.com", password: "123123", first_name: "Naoki", last_name: "Naoki")
-user2.save!
-
-puts "Creating kids..."
-
-kid1 = Kid.new(nickname: "licinha", age: 5, avatar: avatar2, user: user1)
-kid1.save!
-kid2 = Kid.new(nickname: "little_pirate", age: 4, avatar: avatar3, user: user1)
-kid2.save!
-
-puts "Creating games..."
-
-game1 = Game.new(name: "colors", level: 1, kid: kid1, completed: true)
-game1.save!
-
-file = URI.open("https://res.cloudinary.com/dhku8hlz9/image/upload/v1686224730/ci66vxhb0wpbexursb6m.png")
-game1.photos.attach(io: file, filename: "blue.png", content_type: "image/png")
-
-file = URI.open("https://res.cloudinary.com/dhku8hlz9/image/upload/v1686224762/vs3k9plgsh2cclepgze8.png")
-game1.photos.attach(io: file, filename: "yellow.png", content_type: "image/png")
-
-file = URI.open("https://res.cloudinary.com/dhku8hlz9/image/upload/v1686224779/pusmec8ipokomlwmmxqc.png")
-game1.photos.attach(io: file, filename: "green.png", content_type: "image/png")
-
-file = URI.open("https://res.cloudinary.com/dhku8hlz9/image/upload/v1686224795/y7dxvwjwh6j1xfsks1iw.png")
-game1.photos.attach(io: file, filename: "red.png", content_type: "image/png")
-
-puts "No problem in cloudinary"
-
-
-game2 = Game.new(name: "animals", level: 1, kid: kid1)
-game2.save!
-game3 = Game.new(name: "objects", level: 2, kid: kid2)
-game3.save!
-game4 = Game.new(name: "verbs", level: 2, kid: kid2)
-game4.save!
 
 puts "All done!"
