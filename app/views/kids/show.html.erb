@@ -3,15 +3,15 @@
 
 <div>
   <div class="card-profile">
-    <h1><strong><%= @kid.nickname %><strong></h1>
-    <h4>score: <%= @kid.total_score %></h4>
+    <h1 class="main-title"><strong><%= @kid.nickname %><strong></h1>
   </div>
   <div class="card-level">
     <div>
       <h1><strong>Level <%= @kid.total_score + 1 %><strong></h1>
+      <h4>score: <%= @kid.total_score %></h4>
       <hr>
-      <h3>Your Treasures!</h3>
-      <h4>Keep the adventure going</h4>
+      <h4>Here are your treasures!</h4>
+      <p>Keep the adventure going</p>
       <div class="treasures">
         <% @kid.total_score.times do %>
           <%= image_tag "treasure-open.png", id: "treasure-open", alt: "chest closed", width: 60 %>
