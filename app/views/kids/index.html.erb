@@ -17,8 +17,6 @@
         <%= link_to kid_path(kid), data: { turbo_method: :delete, turbo_confirm: "Are you sure you don't wanna play anymore?" }, class:"border rounded-4 d-flex justify-content-center align-items-center delete-btn" do %>
             <i class="fa-solid fa-trash-can trash-icon"> </i><p class="trash-icon"> Delete this player</p>
         <% end %>
-
-      <% end %>
     <% end %>
     <% else %>
       <h1 class="my-5"><strong>Oh, what about the kids? 😃</strong></h1>
