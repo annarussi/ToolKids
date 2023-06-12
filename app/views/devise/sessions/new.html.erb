@@ -1,5 +1,8 @@
-<div class="container">
-  <h1>Log in</h1>
+ <%= image_tag "ks-logo.png", class:"login-logo" %>
+
+<div class="container log-in">
+
+  <h1 class="log-in-text">Ready to start</h1>
 
   <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: :false }) do |f| %>
     <div class="form-inputs login-form">
