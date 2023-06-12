@@ -14,28 +14,64 @@
   left: 275px;
   font-size: 30px;
   text-decoration: none;
+  filter: drop-shadow(1px 1px 16px yellow);
 }
 
 #gameanimals {
   position: absolute;
   top: 380px;
-  left: 240px;
+  left: 230px;
   font-size: 30px;
   text-decoration: none;
+  filter: drop-shadow(1px 1px 16px rgb(85, 84, 84));
 }
 
 #gameobjects {
   position: absolute;
   top: 230px;
-  left: 310px;
+  left: 300px;
   font-size: 30px;
   text-decoration: none;
+  filter: drop-shadow(1px 1px 16px rgb(85, 84, 84));
 }
 
 #gameverbs {
   position: absolute;
   top: 170px;
-  left: 80px;
+  left: 70px;
   font-size: 30px;
   text-decoration: none;
+  filter: drop-shadow(1px 1px 16px rgb(85, 84, 84));
+}
+
+#current-game {
+  animation: scalechest 1.2s .3s infinite;
+  -moz-animation: scalechest 1.2s .3s infinite;
+  -webkit-animation: scalechest 1.2s .3s infinite;
+  -o-animation: scalechest 1.2s .3s infinite;
+  filter: drop-shadow(1px 1px 16px yellow);
+}
+
+@keyframes scalechest {
+  0% { scale: 1; }
+  50% { scale: 1.5; }
+  100% { scale: 1; }
+}
+
+@-moz-keyframes scalechest {
+  0% { scale: 1; }
+  50% { scale: 1.5; }
+  100% { scale: 1; }
+}
+
+@-webkit-keyframes scalechest {
+  0% { scale: 1; }
+  50% { scale: 1.5; }
+  100% { scale: 1; }
+}
+
+@-o-keyframes scalechest {
+  0% { scale: 1; }
+  50% { scale: 1.5; }
+  100% { scale: 1; }
 }
