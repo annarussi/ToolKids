@@ -33,18 +33,18 @@
   background-color: rgb(251,242,224);
   border-radius: 10px;
   box-shadow: 5px 5px 5px rgb(0, 0, 0);;
-  padding: 40px;
+  padding: 20px;
   align-items: center;
   margin-left: 20px;
   margin-right: 20px;
-  margin-top: 120px;
+  margin-top: 80px;
 }
 
 .card-profile {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 55px;
 }
 
 .audio-game {
@@ -57,4 +57,9 @@
   margin-bottom: 50px;
   box-shadow: 1px 1px 3px gray;
   background-color: rgb(223, 176, 73);
+}
+
+.main-title {
+  color:#be8616;
+  font-size: 55px;
 }
