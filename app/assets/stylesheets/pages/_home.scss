@@ -3,3 +3,20 @@
   text-align: center;
   margin-top: 50px;
 }
+
+body {
+  background-image: url("bg.png");
+  background-repeat: no-repeat;
+}
+
+.kid-title {
+  margin-bottom: 30px;
+  margin-top: 50px;
+  color: rgb(89, 177, 68);
+  text-shadow: 1px 1px 1px black;
+}
+
+.kid-sub {
+  margin-top: 50px;
+  margin-bottom: 100px;
+}

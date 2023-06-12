@@ -1,2 +1,20 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<%= render "shared/logo" %>
+
+<div class="container kids-index">
+
+  <div class="kid-title">
+    <h1><strong>The funniest way to learn the local language</strong></h1>
+  </div>
+  <hr>
+
+  <div class="kid-sub">
+    <h2>Enough with the struggling of learning a whole new language. With <strong>Kid Speak</strong> your kid can learn and have fun at the same time. Isn't that awesome?!!</h2>
+    <br>
+    <h2>Here you'll find lectures and educational games for 4 to 6 years old children.</h2>
+    <br>
+    <h2>Don't waste time, start to play now!</h2>
+  </div>
+
+  <%= link_to "I want to play!", new_user_registration_path, class:"form-btn" %>
+
+</div>
