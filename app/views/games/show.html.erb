@@ -12,13 +12,13 @@
   <%# Starting the game %>
   <div class="container">
 
-    <h1 class="text-center game-name"><%= @game.name %></h1>
+    <h1 class="text-center game-name my-3"><%= @game.name %></h1>
 
-    <div class="exercise shadow" data-action="click->game#playSound">
+    <div class="my-4" data-action="click->game#playSound">
       <audio src="<%= audio_path 'vermelho.mp3'%>" data-game-target="vermelho"></audio>
-      <h3 class="text-center">VERMELHO
+      <h2 class="text-center exercise">VERMELHO
         <i class="fa-solid fa-volume-high" data-action="click->game#playSound"></i>
-      </h3>
+      </h2>
     </div>
 
 
@@ -38,12 +38,12 @@
 
       <div class="d-flex justify-content-evenly">
 
-        <div class="card" data-action="click->game#playVerde">
+        <div class="card rounded-4" data-action="click->game#playVerde">
           <audio src="<%= audio_path 'verde.mp3' %>" data-game-target="verde"></audio>
             <%= cl_image_tag @game.photos[2].key, height: 130, width: 130, crop: :fill %>
         </div>
 
-        <div class="card" data-action="click->game#playWin">
+        <div class="card rounded-4" data-action="click->game#playWin">
 
           <audio src="<%=audio_path 'vermelho_win.mp3' %>" data-game-target="win"></audio>
             <%= cl_image_tag @game.photos[3].key, height: 130, width: 130, crop: :fill %>
