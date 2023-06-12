@@ -11,12 +11,12 @@
       <h1><strong>Level <%= @kid.total_score + 1 %><strong></h1>
       <hr>
       <h3>Map completion</h3>
-      <div>
+      <div class="treasures">
         <% @kid.total_score.times do %>
-          <%= image_tag "treasure-open.png", alt: "chest closed", width: 50 %>
+          <%= image_tag "treasure-open.png", id: "treasure-open", alt: "chest closed", width: 50 %>
         <% end %>
         <% (@kid.games.size - @kid.total_score).times do %>
-          <%= image_tag "treasure-closed.png", alt: "chest closed", width: 50 %>
+          <%= image_tag "treasure-closed.png", id: "treasure-closed", alt: "chest closed", width: 50 %>
         <% end %>
       </div>
     </div>
