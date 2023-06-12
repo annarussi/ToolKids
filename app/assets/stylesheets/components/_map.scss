@@ -3,15 +3,15 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  height: 778px;
+  height: 85vh;
   overflow: hidden;
   position: relative;
 }
 
 #gamecolors {
   position: absolute;
-  top: 570px;
-  left: 275px;
+  top: 520px;
+  left: 265px;
   font-size: 30px;
   text-decoration: none;
   filter: drop-shadow(1px 1px 16px yellow);
@@ -19,8 +19,8 @@
 
 #gameanimals {
   position: absolute;
-  top: 380px;
-  left: 230px;
+  top: 350px;
+  left: 160px;
   font-size: 30px;
   text-decoration: none;
   filter: drop-shadow(1px 1px 16px rgb(85, 84, 84));
@@ -28,8 +28,8 @@
 
 #gameobjects {
   position: absolute;
-  top: 230px;
-  left: 300px;
+  top: 215px;
+  left: 292px;
   font-size: 30px;
   text-decoration: none;
   filter: drop-shadow(1px 1px 16px rgb(85, 84, 84));
@@ -37,8 +37,8 @@
 
 #gameverbs {
   position: absolute;
-  top: 170px;
-  left: 70px;
+  top: 150px;
+  left: 80px;
   font-size: 30px;
   text-decoration: none;
   filter: drop-shadow(1px 1px 16px rgb(85, 84, 84));
