@@ -1,23 +1,13 @@
-#full-star {
-color: rgb(255, 251, 6);
-font-size: 56px;
-}
-
-#empty-star {
-color: rgb(197, 166, 166);
-font-size: 56px;
-}
-
-#back {
+.treasures {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: rgb(194, 133, 3);
-  font-size: 60px;
+  justify-content: space-between;
+  column-gap: 10px;
 }
 
-.backtick {
-  color: rgb(194, 133, 3);
-  font-size: 60px;
+#treasure-open {
+  filter: drop-shadow(2px 6px 4px yellow);
+}
+
+#treasure-closed {
+  filter: drop-shadow(2px 6px 4px yellow);
 }
