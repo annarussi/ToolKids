@@ -5,7 +5,7 @@ import { Turbo } from "@hotwired/turbo-rails";
 
 // Connects to data-controller="game"
 export default class extends Controller {
-  static targets = ["gameId", "kidId", "vermelho", "win", "azul", "amarelo", "verde", "colorVermelho", "colorAmarelo", "colorVerde", "colorAzul"]
+  static targets = ["gameId", "kidId", "vermelho", "win", "azul", "amarelo", "verde"]
 
   connect() {
     console.log("game is here")
@@ -45,24 +45,6 @@ export default class extends Controller {
 
   playVerde() {
     this.verdeTarget.play()
-  }
-
-  // Audios para Lecture
-  // Trocar os audios para os somente da cor e linkar no manifest.js
-
-  playColorAzul() {
-    this.colorAzulTarget.play()
-  }
-
-  playColorAmarelo() {
-    this.colorAmareloTarget.play()
-  }
-
-  playColorVerde() {
-    this.colorVerdeTarget.play()
-  }
-  playColorVermelho() {
-    this.colorVermelhoTarget.play()
   }
 
 }
