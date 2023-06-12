@@ -1,0 +1,46 @@
+<div class="d-flex justify-content-between map-bg">
+
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+    <%= cl_image_tag kid.avatar.photo.key, class:"image-sidebar" %>
+
+    <h1 class="sidebar-text"><%= kid.nickname %></h1><br>
+
+    <h2 class="sidebar-text">Level <%= kid.total_score + 1 %></h2>
+
+    <hr>
+
+    <h2><%= link_to "Profile", kid_path(kid), class:"sidebar-text" %></h2>
+
+    <h2><%= link_to "My map", kid_games_path(kid), class:"sidebar-text" %></h2>
+
+    <h1><%= link_to "Change avatar", edit_kid_path(kid), class:"sidebar-text" %></h1>
+
+    <hr>
+
+    <h1><%= link_to "Go to another player", kids_path(kid), class:"sidebar-text" %></h1>
+
+
+    <hr>
+
+
+  </div>
+
+  <span onclick="openNav()"><%= cl_image_tag kid.avatar.photo.key, class:"image-avatar" %></span>
+
+
+  <script>
+  function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+  }
+
+
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+  }
+  </script>
+
+  <%= image_tag "ks-logo.png", class:"image-logo" %>
+
+</div>
