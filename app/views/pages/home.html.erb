@@ -1,6 +1,23 @@
 <% if user_signed_in? %>
 
-  <h1>LETS START THE PARTY</h1>
+  <%= image_tag "ks-logo.png", class:"login-logo" %>
+
+  <div class="container kids-index">
+
+    <h1 class="steps">Follow the steps:</h1>
+    <h2>1. Add your child</h2>
+    <i class="fa-solid fa-circle-plus add-symbol"></i>
+
+    <h2>2. Let her choose her avatar and nickname</h2>
+    <%= image_tag "https://i.pinimg.com/736x/c2/67/a7/c267a7b64cd8a9a726f819f848b7cc51.jpg", class:"avatar-symbol shadow" %>
+
+    <h2>3. Click on the open chest and go to the first lesson</h2>
+    <%= image_tag "treasure-open.png", class:"chest-symbol"%>
+
+    <h2 class="btn-start">4. Now it's time to practice what she learned and play the game!</h2>
+    <%= link_to "Let's start!", kids_path, class:"form-btn" %>
+
+  </div>
 
 <% else %>
 
