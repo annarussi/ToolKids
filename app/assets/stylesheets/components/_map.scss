@@ -14,7 +14,7 @@
   left: 275px;
   font-size: 30px;
   text-decoration: none;
-  filter: drop-shadow(1px 1px 16px yellow);
+
 }
 
 #gameanimals {
@@ -23,7 +23,7 @@
   left: 230px;
   font-size: 30px;
   text-decoration: none;
-  filter: drop-shadow(1px 1px 16px rgb(85, 84, 84));
+
 }
 
 #gameobjects {
@@ -32,7 +32,7 @@
   left: 300px;
   font-size: 30px;
   text-decoration: none;
-  filter: drop-shadow(1px 1px 16px rgb(85, 84, 84));
+
 }
 
 #gameverbs {
@@ -41,9 +41,16 @@
   left: 70px;
   font-size: 30px;
   text-decoration: none;
-  filter: drop-shadow(1px 1px 16px rgb(85, 84, 84));
+
 }
 
+.played {
+  filter: drop-shadow(1px 1px 10px yellow);
+}
+
+.blocked-game {
+  filter: drop-shadow(1px 1px 16px rgb(85, 84, 84));
+}
 #current-game {
   animation: scalechest 1.2s .3s infinite;
   -moz-animation: scalechest 1.2s .3s infinite;
