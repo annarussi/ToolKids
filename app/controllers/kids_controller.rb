@@ -1,6 +1,3 @@
-require "open-uri"
-require_relative "games_create"
-
 class KidsController < ApplicationController
   before_action :set_kids, only: %i[show destroy edit moana_avatar pocahontas_avatar mogli_avatar tarzan_avatar]
   protect_from_forgery with: :null_session
@@ -23,14 +20,6 @@ class KidsController < ApplicationController
     # Give an avatar for the kid
     @kid.avatar = Avatar.last
     if @kid.save
-      # call the method to create the Color game for the kid
-      game_colors
-      # call the method to create the Animal game for the kid
-      game_animals
-      # call the method to create the Objects game for the kid
-      game_objects
-      # call the method to create the Verbs game for the kid
-      game_verbs
       # redirect to choose the avatar
       redirect_to edit_kid_path(@kid)
     else
