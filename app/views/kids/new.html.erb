@@ -1,9 +1,14 @@
 <%= render "shared/logo" %>
 
 <div class="container new-kid-form">
+
+<h1 class="text-center">New player</h1>
+<br>
     <%= simple_form_for @kid do |f| %>
     <%= f.input :nickname, :label => 'nickname' %>
     <%= f.input :age, as: :integer %>
-    <%= f.button :submit, "Choose your avatar!", class:"form-btn" %>
+    <div class="d-flex justify-content-center">
+      <%= f.button :submit, "Choose your avatar!", class:"form-btn" %>
+    </div>
   <% end %>
 </div>

@@ -4,8 +4,7 @@
   <%= render "colors_lecture", game: @game %>
 
 <% elsif @kid.total_score == 1 %>
-<%# write the partial lecture for the second game %>
-  <h2>You are awesome!</h2>
+ <%= render "colors_lecture", game: @game %>
 <% elsif @kid.total_score == 2 %>
 <%# write the partial lecture for the third game %>
   <h2>You are awesome!</h2>
