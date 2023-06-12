@@ -1,64 +1,60 @@
 <%= render "shared/sidebar", kid: @kid %>
 
-<div class="container" data-controller="game">
-
+<div data-controller="game">
+  <%# Taking the targets for the game controller  %>
   <div class="d-none" data-game-target="gameId">
     <%= @game.id %>
   </div>
-
   <div class="d-none" data-game-target="kidId">
     <%= @game.kid.id %>
   </div>
 
-  <h1><%= @game.name %></h1>
+  <%# Starting the game %>
+  <div class="container">
 
-  <div class="card-sound" data-action="click->game#playSound">
+    <h1 class="text-center game-name"><%= @game.name %></h1>
 
-    <audio src="<%= audio_path 'vermelho.mp3'%>" data-game-target="vermelho"></audio>
-    <h5>VERMELHO
-      <i class="fa-solid fa-play" data-action="click->game#playSound"></i>
-    </h5>
-
-  </div>
-
-  <div class="cards">
-
-    <div class="row">
-
-
-      <div class="card col-4 mx-2" data-action="click->game#playAzul">
-        <audio src="<%= audio_path 'azul.mp3' %>" data-game-target="azul"></audio>
-          <%= cl_image_tag @game.photos[0].key %>
-      </div>
-
-      <div class="card col-4" data-action="click->game#playAmarelo">
-        <audio src="<%= audio_path 'amarelo.mp3' %>" data-game-target="amarelo"></audio>
-          <%= cl_image_tag @game.photos[1].key %>
-      </div>
-
+    <div class="exercise shadow" data-action="click->game#playSound">
+      <audio src="<%= audio_path 'vermelho.mp3'%>" data-game-target="vermelho"></audio>
+      <h3 class="text-center">VERMELHO
+        <i class="fa-solid fa-volume-high" data-action="click->game#playSound"></i>
+      </h3>
     </div>
 
-    <div class="row mt-4">
 
-      <div class="card col-4 mx-2" data-action="click->game#playVerde">
-        <audio src="<%= audio_path 'verde.mp3' %>" data-game-target="verde"></audio>
-          <%= cl_image_tag @game.photos[2].key %>
+      <div class="d-flex justify-content-evenly my-3">
+
+        <div class="card rounded-4" data-action="click->game#playAzul">
+          <audio src="<%= audio_path 'azul.mp3' %>" data-game-target="azul"></audio>
+            <%= cl_image_tag @game.photos[0].key, height: 130, width: 130, crop: :fill %>
+        </div>
+
+        <div class="card rounded-4" data-action="click->game#playAmarelo">
+          <audio src="<%= audio_path 'amarelo.mp3' %>" data-game-target="amarelo"></audio>
+            <%= cl_image_tag @game.photos[1].key, height: 130, width: 130, crop: :fill %>
+        </div>
+
       </div>
 
+      <div class="d-flex justify-content-evenly">
 
+        <div class="card" data-action="click->game#playVerde">
+          <audio src="<%= audio_path 'verde.mp3' %>" data-game-target="verde"></audio>
+            <%= cl_image_tag @game.photos[2].key, height: 130, width: 130, crop: :fill %>
+        </div>
 
-      <div class="card col-4" data-action="click->game#playWin">
+        <div class="card" data-action="click->game#playWin">
 
-        <audio src="<%=audio_path 'vermelho_win.mp3' %>" data-game-target="win"></audio>
-          <%= cl_image_tag @game.photos[3].key %>
+          <audio src="<%=audio_path 'vermelho_win.mp3' %>" data-game-target="win"></audio>
+            <%= cl_image_tag @game.photos[3].key, height: 130, width: 130, crop: :fill %>
+        </div>
+
       </div>
 
-    </div>
+    <%# <footer>
+      <%= link_to lecture_kid_game_path(@game.kid, @game) do %>
+        <%# <i class="fa-solid fa-chevron-left"></i> %>
+      <%# end %>
+    <%# </footer> %>
   </div>
-
-  <%# <footer>
-    <%= link_to lecture_kid_game_path(@game.kid, @game) do %>
-      <%# <i class="fa-solid fa-chevron-left"></i> %>
-    <%# end %>
-  <%# </footer> %>
 </div>
