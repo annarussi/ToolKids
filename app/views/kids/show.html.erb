@@ -1,8 +1,9 @@
 
 <%= render "shared/sidebar", kid: @kid %>
+
 <div>
   <div class="card-profile">
-    <h3><%= @kid.nickname %></h3>
+    <h1><strong><%= @kid.nickname %><strong></h1>
     <h4>score: <%= @kid.total_score %></h4>
   </div>
   <div class="card-level">
@@ -10,16 +11,14 @@
       <h1><strong>Level <%= @kid.total_score + 1 %><strong></h1>
       <hr>
       <h3>Map completion</h3>
-      <i id= "full-star" class="fa-solid fa-star"></i>
-      <i id= "empty-star" class="fa-regular fa-star"></i>
-      <i id= "empty-star" class="fa-regular fa-star"></i>
-      <i id= "empty-star" class="fa-regular fa-star"></i>
-
+      <div>
+        <% @kid.total_score.times do %>
+          <%= image_tag "treasure-open.png", alt: "chest closed", width: 50 %>
+        <% end %>
+        <% (@kid.games.size - @kid.total_score).times do %>
+          <%= image_tag "treasure-closed.png", alt: "chest closed", width: 50 %>
+        <% end %>
+      </div>
     </div>
-  </div>
-  <div id="back" >
-    <%= link_to kid_games_path(@kid), class: "text-decoration-none" do %>
-      <i class="backtick fa-solid fa-angle-left"></i>
-    <% end %>
   </div>
 </div>
