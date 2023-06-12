@@ -8,32 +8,34 @@
   <h1 class="text-center my-4">
     Choose your avatar, <%= @kid.nickname.capitalize %>!
   </h1>
+  <br>
 
-    <div class="row my-5">
-      <div class="col-6" data-action="click->avatar#moanaAvatar">
-      <%= cl_image_tag @avatars[0].photo.key, class:"avatar shadow avatar-edit mx-4"  %>
+    <div class="d-flex justify-content-around" >
+      <div data-action="click->avatar#moanaAvatar">
+        <%= cl_image_tag @avatars[0].photo.key, class:"avatar shadow avatar-edit" %>
         <h2 class="avatar-edit text-center"><%= @avatars[0].name.capitalize %></h2>
       </div>
 
-      <div class="col-6" data-action="click->avatar#pocahontasAvatar">
-        <%= cl_image_tag @avatars[1].photo.key, class:"avatar shadow avatar-edit mx-4"  %>
+      <div data-action="click->avatar#pocahontasAvatar">
+        <%= cl_image_tag @avatars[1].photo.key, class:"avatar shadow" %>
         <h2 class="avatar-edit text-center"><%= @avatars[1].name.capitalize %></h2>
       </div>
     </div>
 
 
-    <div class="row">
-      <div class="col-6" data-action="click->avatar#mogliAvatar">
+
+    <div class="d-flex justify-content-around my-5">
+      <div data-action="click->avatar#mogliAvatar">
         <%= cl_image_tag @avatars[2].photo.key, class:"avatar shadow avatar-edit mx-4"  %>
         <h2 class="avatar-edit text-center"><%= @avatars[2].name.capitalize %></h2>
       </div>
 
-      <div class="col-6" data-action="click->avatar#tarzanAvatar">
+      <div data-action="click->avatar#tarzanAvatar">
         <%= cl_image_tag @avatars[3].photo.key, class:"avatar shadow avatar-edit mx-4"  %>
         <h2 class="avatar-edit text-center"><%= @avatars[3].name %></h2>
       </div>
     </div>
-  <br>
-  <br>
-  <%= link_to "Let's play!", kid_games_path(@kid), class:"btn-brown" %>
+  <div class="d-flex justify-content-center">
+    <%= link_to "Let's play!", kid_games_path(@kid), class:"btn-brown" %>
+  </div>
 </div>

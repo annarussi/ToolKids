@@ -1,12 +1,11 @@
 <div class="d-flex justify-content-between align-items-center">
 
+
   <% if user_signed_in? %>
     <%= link_to "Log Out", destroy_user_session_path, data: {turbo_method: :delete, turbo_confirm: "Are you sure you wanna log out?" }, class: "logout" %>
   <% else %>
     <%= link_to "Log in", new_user_session_path, class: "logout" %>
   <% end %>
 
-  <%= link_to kids_path do %>
   <%= image_tag "ks-logo.png", class:"image-logo", width: 100 %>
-  <% end %>
 </div>
