@@ -12,7 +12,7 @@
   <%# Starting the game %>
   <div class="container">
 
-    <h1 class="text-center game-name my-3"><%= @game.name %></h1>
+    <h1><%= @game.name %></h1>
 
     <div class="my-4" data-action="click->game#playSound">
       <audio src="<%= audio_path 'vermelho.mp3'%>" data-game-target="vermelho"></audio>
