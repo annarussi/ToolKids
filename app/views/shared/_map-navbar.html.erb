@@ -5,7 +5,7 @@
 
     <%= cl_image_tag kid.avatar.photo.key, class:"image-sidebar" %>
 
-    <h1 class="sidebar-text"><%= kid.nickname %></h1><br>
+    <h2 class="sidebar-text"><%= kid.nickname %></h2><br>
 
     <h2 class="sidebar-text">Level <%= kid.total_score + 1 %></h2>
 
@@ -15,11 +15,11 @@
 
     <h2><%= link_to "Treasure map", kid_games_path(kid), class:"sidebar-text" %></h2>
 
-    <h1><%= link_to "Change character", edit_kid_path(kid), class:"sidebar-text" %></h1>
+    <h2><%= link_to "Change your avatar", edit_kid_path(kid), class:"sidebar-text" %></h2>
 
     <hr>
 
-    <h1><%= link_to "Players", kids_path(kid), class:"sidebar-text" %></h1>
+    <h2><%= link_to "Players", kids_path(kid), class:"sidebar-text" %></h2>
 
 
     <hr>
