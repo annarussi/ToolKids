@@ -11,6 +11,8 @@ Rails.application.routes.draw do
     patch :pocahontas_avatar, on: :member
     patch :mogli_avatar, on: :member
     patch :tarzan_avatar, on: :member
+    patch :simba_avatar, on: :member
+    patch :ariel_avatar, on: :member
     resources :games, only: [:index, :show] do
       patch :completed, on: :member
       member do
@@ -18,5 +20,4 @@ Rails.application.routes.draw do
       end
     end
   end
-
 end
