@@ -12,3 +12,6 @@ application.register("game", GameController)
 
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
+
+import { Confetti } from "stimulus-confetti"
+application.register('confetti', Confetti)
