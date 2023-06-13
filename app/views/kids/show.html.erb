@@ -3,11 +3,12 @@
 
 <div>
   <div class="card-profile">
-    <h1 class="main-title"><strong><%= @kid.nickname %><strong></h1>
+    <h1><strong><%= @kid.nickname %><strong></h1>
   </div>
-  <div class="card-level">
+
+  <div class="card-level shadow">
     <div>
-      <h1><strong>Level <%= @kid.total_score + 1 %><strong></h1>
+      <h2><strong>Level <%= @kid.total_score + 1 %><strong></h2>
       <h4>score: <%= @kid.total_score %></h4>
       <hr>
       <h4>Here are your treasures!</h4>
