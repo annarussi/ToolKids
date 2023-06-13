@@ -20,6 +20,7 @@ class KidsController < ApplicationController
     # Give an avatar for the kid
     @kid.avatar = Avatar.last
     if @kid.save
+      CreateGames.call(kid: @kid)
       # redirect to choose the avatar
       redirect_to edit_kid_path(@kid)
     else
