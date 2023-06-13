@@ -7,16 +7,16 @@
     <h1><strong>Who wants to play?</strong></h1>
   </div>
     <% @kids.each do |kid| %>
-      <div class=" kids-card">
+      <div class="kids-card mt-5">
         <%= link_to  kid_games_path(kid), class:"text-decoration-none" do %>
           <%= cl_image_tag kid.avatar.photo.key, class:"avatar shadow" %>
         <% end %>
           <h2 class="my-1"><strong><%= kid.nickname %></i></strong></h2>
-      </div>
 
-        <%= link_to kid_path(kid), data: { turbo_method: :delete, turbo_confirm: "Are you sure you don't wanna play anymore?" }, class:"border rounded-4 d-flex justify-content-center align-items-center delete-btn" do %>
-            <i class="fa-solid fa-trash-can trash-icon"> </i><p class="trash-icon"> Delete this player</p>
+          <%= link_to kid_path(kid), data: { turbo_method: :delete, turbo_confirm: "Are you sure you don't wanna play anymore?" }, class:"delete-btn" do %>
+          <i class="fa-solid fa-trash-can trash-icon"> </i>
         <% end %>
+      </div>
     <% end %>
     <% else %>
       <h1><strong>Where are the kids?</strong></h1>

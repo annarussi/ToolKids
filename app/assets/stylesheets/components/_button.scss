@@ -20,16 +20,18 @@
 
 .trash-icon {
   color: #b4914c;
-  font-size: 18px;
+  font-size: 24px;
   margin-top: 15px;
   text-decoration: none;
   margin-bottom: 20px;
 }
-
+.kids-card {
+  position: relative;
+}
 .delete-btn {
-  width: 200px;
-  height: 45px;
-  margin: 25px auto;
+  position:absolute;
+  top: 0px;
+  right: 100px;
 }
 
 .logout {
