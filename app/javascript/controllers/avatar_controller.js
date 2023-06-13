@@ -66,4 +66,32 @@ export default class extends Controller {
       Turbo.visit(`/kids/${kidId}/edit`);
     }})
   }
+
+  simbaAvatar() {
+
+    const kidId = this.kidIdTarget.innerText.trim();
+
+    fetch(`/kids/${kidId}/simba_avatar`, {
+      method: "PATCH",
+      headers: {"Content-Type": "application/json"}
+    }).then(response => {
+      if (response.ok) {
+      // Redirecionamento para outra view
+      Turbo.visit(`/kids/${kidId}/edit`);
+    }})
+  }
+
+  arielAvatar() {
+
+    const kidId = this.kidIdTarget.innerText.trim();
+
+    fetch(`/kids/${kidId}/ariel_avatar`, {
+      method: "PATCH",
+      headers: {"Content-Type": "application/json"}
+    }).then(response => {
+      if (response.ok) {
+      // Redirecionamento para outra view
+      Turbo.visit(`/kids/${kidId}/edit`);
+    }})
+  }
 }

@@ -37,7 +37,7 @@
 
   <% if @kid.total_score >= 1 %>
     <div class="d-flex justify-content-around mt-4 mb-2">
-      <div data-action="click->avatar#mogliAvatar">
+      <div data-action="click->avatar#simbaAvatar">
         <%= cl_image_tag @simba.photo.key, class:"avatar shadow avatar-edit"  %>
         <h4 class="avatar-edit text-center mt-3"><%= @simba.name.capitalize %></h4>
       </div>
@@ -45,7 +45,7 @@
   <% end %>
 
   <% if @kid.total_score >= 2 %>
-      <div data-action="click->avatar#mogliAvatar">
+      <div data-action="click->avatar#arielAvatar">
         <%= cl_image_tag @ariel.photo.key, class:"avatar shadow avatar-edit"  %>
         <h4 class="avatar-edit text-center mt-3"><%= @ariel.name.capitalize %></h4>
       </div>
