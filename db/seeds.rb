@@ -16,35 +16,60 @@ Avatar.destroy_all
 
 puts "Creating avatars..."
 
-avatar1 = Avatar.new(name: "moana")
-avatar1.save!
+# Create Moana avatar
+avatar_moana = Avatar.new(name: "moana")
+avatar_moana.save!
 
 file = URI.open("https://i2-prod.mylondon.news//article18152052.ece/ALTERNATES/s1200b/0_Moana.jpg")
-avatar1.photo.attach(io: file, filename: "moana.jpg", content_type: "image/jpg")
+avatar_moana.photo.attach(io: file, filename: "moana.jpg", content_type: "image/jpg")
 
-avatar2 = Avatar.new(name: "pocahontas")
-avatar2.save!
+# Create Pocahontas avatar
+
+avatar_pocahontas = Avatar.new(name: "pocahontas")
+avatar_pocahontas.save!
 
 file = URI.open("https://disneyplusbrasil.com.br/wp-content/uploads/2022/12/Pocahontas-Disney-Plus.jpg")
-avatar2.photo.attach(io: file, filename: "pocahontas.jpg", content_type: "image/jpg")
+avatar_pocahontas.photo.attach(io: file, filename: "pocahontas.jpg", content_type: "image/jpg")
 
-avatar3 = Avatar.new(name: "mogli")
-avatar3.save!
+# Create Mogli avatar
+
+avatar_mogli = Avatar.new(name: "mogli")
+avatar_mogli.save!
 
 file = URI.open("https://akamai.sscdn.co/uploadfile/letras/fotos/0/e/7/d/0e7d7217fa288dfa95b4489344196ecd.jpg")
-avatar3.photo.attach(io: file, filename: "mogli.jpg", content_type: "image/jpg")
+avatar_mogli.photo.attach(io: file, filename: "mogli.jpg", content_type: "image/jpg")
 
-avatar4 = Avatar.new(name: "tarzan")
-avatar4.save!
+# Create Tarzan avatar
+
+avatar_tarzan = Avatar.new(name: "tarzan")
+avatar_tarzan.save!
 
 file = URI.open("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8CQc-dNUpP3byOSYxo9Hx1hxHLpRg1OmyAQ&usqp=CAU")
-avatar4.photo.attach(io: file, filename: "tarzan.jpg", content_type: "image/jpg")
+avatar_tarzan.photo.attach(io: file, filename: "tarzan.jpg", content_type: "image/jpg")
 
-avatar5 = Avatar.new(name: "default")
-avatar5.save!
+# Create Simba avatar
+
+avatar_simba = Avatar.new(name: "simba")
+avatar_simba.save!
+
+file = URI.open("https://s1.eestatic.com/2018/08/27/social/humor-el_rey_leon-disney_333478673_94773643_1706x960.jpg")
+avatar_simba.photo.attach(io: file, filename: "simba.jpg", content_type: "image/jpg")
+
+# Create Ariel avatar
+
+avatar_ariel = Avatar.new(name: "ariel")
+avatar_ariel.save!
+
+file = URI.open("https://www.historiaparadormir.com.br/wp-content/uploads/2020/03/Ariel.jpg")
+avatar_ariel.photo.attach(io: file, filename: "ariel.jpg", content_type: "image/jpg")
+
+# Create Default avatar
+
+avatar_default = Avatar.new(name: "default")
+avatar_default.save!
 
 file = URI.open("https://icon-library.com/images/no-image-icon/no-image-icon-0.jpg")
-avatar5.photo.attach(io: file, filename: "default.jpg", content_type: "image/jpg")
+avatar_default.photo.attach(io: file, filename: "default.jpg", content_type: "image/jpg")
 
 puts "Creating users..."
 
