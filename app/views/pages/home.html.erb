@@ -25,21 +25,47 @@
 
   <div class="container kids-index">
 
-    <div class="kid-title">
-      <h2 class="kid-title"><strong>The funniest way to learn the local language</strong></h2>
-    </div>
-    <hr>
+  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+      </div>
 
-    <div class="kid-sub">
-      <h2>Enough with the struggling of learning a whole new language. With <strong>Kid Speak</strong> your kid can learn and have fun at the same time. Isn't that awesome?!!</h2>
-      <br>
-      <h2>Here you'll find lectures and educational games for 4 to 6 years old children.</h2>
-      <br>
-      <h2>Don't waste time, start to play now!</h2>
+      <div class="carousel-inner">
+        <div class="card card-carousel carousel-item active">
+          <h2 class="card-info">The funniest way to learn the local language!</h2><br>
+        </div>
+
+        <div class="card card-carousel carousel-item">
+          <h2 class="card-info">With <strong>Kid Speak</strong> your kid can learn and have fun at the same time.</h2><br>
+        </div>
+
+        <div class="card card-carousel carousel-item">
+          <h2 class="card-info">Here you'll find lectures and educational games for 4 to 6 years old children.</h2><br>
+        </div>
+
+        <div class="card card-carousel carousel-item">
+          <h2 class="card-info">Don't waste time! Click at the button below to start.</h2><br>
+        </div>
+
+      </div>
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+
     </div>
 
-    <%= link_to "I want to play!", new_user_registration_path, class:"form-btn" %>
+    <div class="btn-start">
+      <%= link_to "I want to play!", new_user_registration_path, class:"btn-text" %>
+    </div>
 
   </div>
-
 <% end %>
