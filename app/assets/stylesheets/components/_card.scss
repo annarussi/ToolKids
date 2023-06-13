@@ -58,3 +58,34 @@
   box-shadow: 1px 1px 3px gray;
   background-color: #80bc56
 }
+
+.game-card {
+  animation: scalegame .1s .1s 3;
+  -moz-animation: scalegame .1s .1s 3;
+  -webkit-animation: scalegame .1s .1s 3;
+  -o-animation: scalegame .1s .1s 3;
+}
+
+@keyframes scalegame {
+  0% { scale: 1; }
+  50% { scale: 1.3; }
+  100% { scale: 1; }
+}
+
+@-moz-keyframes scalegame {
+  0% { scale: 1; }
+  50% { scale: 1.3; }
+  100% { scale: 1; }
+}
+
+@-webkit-keyframes scalegame {
+  0% { scale: 1; }
+  50% { scale: 1.3; }
+  100% { scale: 1; }
+}
+
+@-o-keyframes scalegame {
+  0% { scale: 1; }
+  50% { scale: 1.3; }
+  100% { scale: 1; }
+}

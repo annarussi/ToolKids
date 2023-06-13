@@ -14,17 +14,13 @@ class GamesController < ApplicationController
   end
 
   def completed
-    @game.completed = true
-    @kid.total_score += 1
-    @kid.save
-    @game.save
+    @game.update(completed: true)
+    @kid.update(total_score: @kid.total_score + 1)
 
-    sleep(4)
     respond_to do |format|
       format.json { head :ok }
       format.html { head :ok }
     end
-
   end
 
   private
