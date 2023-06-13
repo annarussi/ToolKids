@@ -5,7 +5,7 @@ import { Turbo } from "@hotwired/turbo-rails";
 
 // Connects to data-controller="game"
 export default class extends Controller {
-  static targets = ["gameId", "kidId", "vermelho", "win", "azul", "amarelo", "verde", "azulCard", "amareloCard", "verdeCard"]
+  static targets = ["gameId", "kidId", "exercise", "win", "azul", "amarelo", "verde", "azulCard", "amareloCard", "verdeCard"]
 
   connect() {
     console.log("game is here")
@@ -14,7 +14,7 @@ export default class extends Controller {
     // Audios para o game
 
   playSound() {
-    this.vermelhoTarget.play()
+    this.exerciseTarget.play()
   }
 
   playWin() {

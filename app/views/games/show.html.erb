@@ -1,5 +1,8 @@
 <%= render "shared/sidebar", kid: @kid %>
 
+<%# Condition for the voice %>
+<% female = @kid.avatar.name == "moana" || @kid.avatar.name == "pocahontas" || @kid.avatar.name == "ariel" %>
+
 <div data-controller="game">
   <%# Taking the targets for the game controller  %>
   <div class="d-none" data-game-target="gameId">
@@ -15,52 +18,73 @@
     <h1><%= @game.name %></h1>
 
     <div class="my-4" data-action="click->game#playSound">
-      <audio src="<%= audio_path 'vermelho.mp3'%>" data-game-target="vermelho"></audio>
+      <%# Audio of the exercise %>
+      <% if female %>
+        <audio src="<%= audio_path 'vermelho.mp3'%>" data-game-target="exercise"></audio>
+      <% else %>
+        <audio src="<%= audio_path 'amarelo.mp3'%>" data-game-target="exercise"></audio>
+      <% end %>
 
       <div class="card audio-game">
-
         <h2><i class="fa-solid fa-volume-high" data-action="click->game#playSound"></i></h2>
+      </div>
+    </div>
 
+    <div class="d-flex justify-content-evenly my-3">
+
+      <div class="card rounded-4" data-game-target="azulCard">
+        <div data-action="click->game#playAzul">
+          <%# Audio of the first card %>
+          <% if female %>
+          <audio src="<%= audio_path 'azul.mp3' %>" data-game-target="azul"></audio>
+          <% else %>
+          <audio src="<%= audio_path 'amarelo.mp3'%>" data-game-target="azul"></audio>
+          <% end %>
+          <%= cl_image_tag @game.photos[0].key, height: 130, width: 130, crop: :fill %>
+        </div>
+      </div>
+
+      <div class="card rounded-4" data-game-target="amareloCard">
+        <div data-action="click->game#playAmarelo">
+          <%# Audio of the second card %>
+          <% if female %>
+          <audio src="<%= audio_path 'amarelo.mp3' %>" data-game-target="amarelo"></audio>
+          <% else %>
+          <audio src="<%= audio_path 'amarelo.mp3'%>" data-game-target="amarelo"></audio>
+          <% end %>
+          <%= cl_image_tag @game.photos[1].key, height: 130, width: 130, crop: :fill %>
+        </div>
       </div>
 
     </div>
 
+    <div class="d-flex justify-content-evenly">
 
-      <div class="d-flex justify-content-evenly my-3">
-
-        <div class="card rounded-4" data-game-target="azulCard">
-          <div data-action="click->game#playAzul">
-            <audio src="<%= audio_path 'azul.mp3' %>" data-game-target="azul"></audio>
-            <%= cl_image_tag @game.photos[0].key, height: 130, width: 130, crop: :fill %>
-          </div>
+      <div class="card rounded-4" data-game-target="verdeCard">
+        <div data-action="click->game#playVerde">
+          <%# Audio for the third card %>
+          <% if female %>
+          <audio src="<%= audio_path 'verde.mp3' %>" data-game-target="verde"></audio>
+          <% else %>
+          <audio src="<%= audio_path 'amarelo.mp3'%>" data-game-target="verde"></audio>
+          <% end %>
+          <%= cl_image_tag @game.photos[2].key, height: 130, width: 130, crop: :fill %>
         </div>
-
-        <div class="card rounded-4" data-game-target="amareloCard">
-          <div data-action="click->game#playAmarelo">
-            <audio src="<%= audio_path 'amarelo.mp3' %>" data-game-target="amarelo"></audio>
-            <%= cl_image_tag @game.photos[1].key, height: 130, width: 130, crop: :fill %>
-          </div>
-        </div>
-
       </div>
 
-      <div class="d-flex justify-content-evenly">
-
-        <div class="card rounded-4" data-game-target="verdeCard">
-          <div data-action="click->game#playVerde">
-            <audio src="<%= audio_path 'verde.mp3' %>" data-game-target="verde"></audio>
-            <%= cl_image_tag @game.photos[2].key, height: 130, width: 130, crop: :fill %>
-          </div>
+      <div class="card rounded-4" data-confetti-follow-value="false" data-controller="confetti" data-action="click->confetti#spray" data-animation-value="basic">
+        <div data-action="click->game#playWin">
+          <%# Audio for the winner card %>
+          <% if female %>
+          <audio src="<%=audio_path 'vermelho_win.mp3' %>" data-game-target="win"></audio>
+          <% else %>
+          <audio src="<%= audio_path 'amarelo.mp3'%>" data-game-target="win"></audio>
+          <% end %>
+          <%= cl_image_tag @game.photos[3].key, height: 130, width: 130, crop: :fill %>
         </div>
-
-        <div class="card rounded-4" data-confetti-follow-value="false" data-controller="confetti" data-action="click->confetti#spray" data-animation-value="basic">
-          <div data-action="click->game#playWin">
-            <audio src="<%=audio_path 'vermelho_win.mp3' %>" data-game-target="win"></audio>
-            <%= cl_image_tag @game.photos[3].key, height: 130, width: 130, crop: :fill %>
-          </div>
-        </div>
-
       </div>
+
+    </div>
 
     <footer>
       <%= link_to lecture_kid_game_path(@game.kid, @game) do %>
