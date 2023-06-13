@@ -29,7 +29,12 @@ class KidsController < ApplicationController
   end
 
   def edit
-    @avatars = Avatar.all
+    @moana = Avatar.find_by(name: "moana")
+    @pocahontas = Avatar.find_by(name: "pocahontas")
+    @mogli = Avatar.find_by(name: "mogli")
+    @tarzan = Avatar.find_by(name: "tarzan")
+    @simba = Avatar.find_by(name: "simba")
+    @ariel = Avatar.find_by(name: "ariel")
   end
 
   def moana_avatar
