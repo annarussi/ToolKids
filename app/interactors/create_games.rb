@@ -83,17 +83,69 @@ class CreateGames
   def game_animals
     game_animals = Game.new(name: "Animals", level: 2, kid: context.kid)
     game_animals.save
+
+    # elefante
     file1 = URI.open("https://res.cloudinary.com/dhku8hlz9/image/upload/v1686585049/elefante2_afq3ya.png")
     game_animals.photos.attach(io: file1, filename: "elefante.png", content_type: "image/png")
 
+    # audio elefante ana
+    file1 = URI.open("https://res.cloudinary.com/dhku8hlz9/video/upload/v1686732030/A-Elefante_dbzcng.mp3")
+    game_animals.videos.attach(io: file1, filename: "a-elefante.mp3", content_type: "audio/mpeg")
+
+    # audio elefante francisco
+    file1 = URI.open("https://res.cloudinary.com/dhku8hlz9/video/upload/v1686732145/F-Elefante_ygzqbp.mp3")
+    game_animals.videos.attach(io: file1, filename: "f-elefante.mp3", content_type: "audio/mpeg")
+
+
+    # girafa
     file2 = URI.open("https://res.cloudinary.com/dhku8hlz9/image/upload/v1686585049/girafa2_pjcal8.png")
     game_animals.photos.attach(io: file2, filename: "girafa.png", content_type: "image/png")
 
+    # audio girafa ana
+    file2 = URI.open("https://res.cloudinary.com/dhku8hlz9/video/upload/v1686732030/A-Girafa_cpkxtf.mp3")
+    game_animals.videos.attach(io: file2, filename: "a-girafa.mp3", content_type: "audio/mpeg")
+
+    # audio girafa francisco
+    file2 = URI.open("https://res.cloudinary.com/dhku8hlz9/video/upload/v1686732145/F-Girafa_sfpiyi.mp3")
+    game_animals.videos.attach(io: file2, filename: "f-girafa.mp3", content_type: "audio/mpeg")
+
+
+    # tigre
     file3 = URI.open("https://res.cloudinary.com/dhku8hlz9/image/upload/v1686585049/tigre2_zzgxo1.png")
     game_animals.photos.attach(io: file3, filename: "tigre.png", content_type: "image/png")
 
+    # audio tigre ana
+    file3 = URI.open("https://res.cloudinary.com/dhku8hlz9/video/upload/v1686732077/A-Tigre_ic4ixd.mp3")
+    game_animals.videos.attach(io: file3, filename: "a-tigre.mp3", content_type: "audio/mpeg")
+
+    # audio tigre francisco
+    file3 = URI.open("https://res.cloudinary.com/dhku8hlz9/video/upload/v1686732145/F-Tigre_a5jepg.mp3")
+    game_animals.videos.attach(io: file3, filename: "f-tigre.mp3", content_type: "audio/mpeg")
+
+
+    # leao
     file4 = URI.open("https://res.cloudinary.com/dhku8hlz9/image/upload/v1686585049/leao2_r6qafz.png")
     game_animals.photos.attach(io: file4, filename: "leao.png", content_type: "image/png")
+
+    # audio leao ana
+    file4 = URI.open("https://res.cloudinary.com/dhku8hlz9/video/upload/v1686732076/A-Leao-Parabens_wq6hqa.mp3")
+    game_animals.videos.attach(io: file4, filename: "a-leao.mp3", content_type: "audio/mpeg")
+
+    # audio leao francisco
+    file4 = URI.open("https://res.cloudinary.com/dhku8hlz9/video/upload/v1686732145/F-Leao-parabens_dhum6p.mp3")
+    game_animals.videos.attach(io: file4, filename: "f-leao.mp3", content_type: "audio/mpeg")
+
+
+    # audios exercise
+    # audio ana
+    file5 = URI.open("https://res.cloudinary.com/dhku8hlz9/video/upload/v1686732029/A-Leao_qz9li9.mp3")
+    game_animals.videos.attach(io: file5, filename: "a-exercise.mp3", content_type: "audio/mpeg")
+
+    # audio francisco
+    file5 = URI.open("https://res.cloudinary.com/dhku8hlz9/video/upload/v1686732145/F-Leao_onmohy.mp3")
+    game_animals.videos.attach(io: file5, filename: "f-exercise.mp3", content_type: "audio/mpeg")
+
+
   end
 
   def game_objects
