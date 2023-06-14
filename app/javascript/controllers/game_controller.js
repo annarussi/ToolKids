@@ -38,16 +38,25 @@ export default class extends Controller {
   playAzul() {
     this.azulTarget.play()
     this.azulCardTarget.classList.add('game-card')
+
+    setTimeout(() =>
+    this.azulCardTarget.classList.remove('game-card'), 1000);
   }
 
   playAmarelo() {
     this.amareloTarget.play()
     this.amareloCardTarget.classList.add('game-card')
+
+    setTimeout(() =>
+    this.amareloCardTarget.classList.remove('game-card'), 1000);
   }
 
   playVerde() {
     this.verdeTarget.play()
     this.verdeCardTarget.classList.add('game-card')
+
+    setTimeout(() =>
+    this.verdeCardTarget.classList.remove('game-card'), 1000);
   }
 
 }
