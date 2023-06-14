@@ -8,3 +8,37 @@
   margin-bottom: 60px;
   margin-top: 50px;
 }
+
+.avatar-win {
+
+  animation: scalechest 1.2s .3s 3;
+  -moz-animation: scalechest 1.2s .3s 3;
+  -webkit-animation: scalechest 1.2s .3s 3;
+  -o-animation: scalechest 1.2s .3s 3;
+  filter: drop-shadow(1px 1px 16px yellow);
+}
+
+
+@keyframes scalechest {
+  0% { scale: 1; }
+  50% { scale: 1.2; }
+  100% { scale: 1; }
+}
+
+@-moz-keyframes scalechest {
+  0% { scale: 1; }
+  50% { scale: 1.2; }
+  100% { scale: 1; }
+}
+
+@-webkit-keyframes scalechest {
+  0% { scale: 1; }
+  50% { scale: 1.2; }
+  100% { scale: 1; }
+}
+
+@-o-keyframes scalechest {
+  0% { scale: 1; }
+  50% { scale: 1.2; }
+  100% { scale: 1; }
+}

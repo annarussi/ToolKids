@@ -7,6 +7,10 @@
 body {
   background-image: url("bg.png");
   background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Short Stack', cursive;
+  background-color: #FFFCE2;
+  color: #422917;
 }
 
 h1 {
@@ -16,6 +20,11 @@ h1 {
   font-weight: bolder;
   font-size: 30px;
   text-align: center;
+  font-family: 'Short Stack', cursive;
+}
+
+h2, h3, h4, h5, h6 {
+  font-family: 'Short Stack', cursive;
 }
 
 .kid-title {

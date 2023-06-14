@@ -10,7 +10,7 @@
           <%= image_tag "treasure-open.png", alt: "chest-open", width: 60, class:"played", id: "game#{game.name}" %>
       <% elsif @kid.total_score + 1 == game.level %>
       <%# Here we could code something to be like poping in the screen, so the kid knows that's the next game %>
-          <%= link_to kid_game_path(@kid, game), id: "game#{game.name}" do %>
+          <%= link_to lecture_kid_game_path(@kid, game), id: "game#{game.name}" do %>
           <%= image_tag "treasure-open.png", alt: "chest-open", width: 60, id: "current-game" %>
         <% end %>
       <% else %>

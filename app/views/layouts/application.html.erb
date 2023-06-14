@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Kidspeack the adventure of learning</title>
+    <title><%= meta_title %></title>
+    <meta name="description" content="<%= meta_description %>">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <%= favicon_link_tag %>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -14,7 +16,7 @@
   <body>
 
     <%= render "shared/flashes" %>
-    <div class="layout" >
+    <div class="bg-img" >
       <%= yield %>
     </div>
   </body>
