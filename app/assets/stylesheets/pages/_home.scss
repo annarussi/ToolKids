@@ -7,6 +7,7 @@
 body {
   background-image: url("bg.png");
   background-repeat: no-repeat;
+  font-family: 'Short Stack', cursive;
 }
 
 h1 {
@@ -16,6 +17,11 @@ h1 {
   text-shadow: 1px 1px 1px black;
   font-size: 40px;
   text-align: center;
+  font-family: 'Short Stack', cursive;
+}
+
+h2, h3, h4, h5, h6 {
+  font-family: 'Short Stack', cursive;
 }
 
 .kid-title {
