@@ -17,12 +17,12 @@
 
     <h1><%= @game.name %></h1>
 
-    <div class="my-4" data-action="click->game#playSound">
+    <div class="my-5" data-action="click->game#playSound">
       <%# Audio of the exercise %>
       <% if female %>
-        <%= cl_video_tag @game.videos[8].key, data: { game_target: "exercise" } %>
+        <%= cl_video_tag @game.videos[8].key, class: "d-none", data: { game_target: "exercise" } %>
       <% else %>
-        <%= cl_video_tag @game.videos[9].key, data: { game_target: "exercise" } %>
+        <%= cl_video_tag @game.videos[9].key, class: "d-none", data: { game_target: "exercise" } %>
       <% end %>
 
       <div class="card audio-game">
@@ -36,9 +36,9 @@
         <div data-action="click->game#playWrongAnswer1">
           <%# Audio of the first card %>
           <% if female %>
-            <%= cl_video_tag @game.videos[0].key, data: { game_target: "wrongAnswer1" } %>
+            <%= cl_video_tag @game.videos[0].key, class: "d-none", data: { game_target: "wrongAnswer1" } %>
           <% else %>
-            <%= cl_video_tag @game.videos[1].key, data: { game_target: "wrongAnswer1" } %>
+            <%= cl_video_tag @game.videos[1].key, class: "d-none", data: { game_target: "wrongAnswer1" } %>
           <% end %>
           <%= cl_image_tag @game.photos[0].key, height: 130, width: 130, crop: :fill %>
         </div>
@@ -48,9 +48,9 @@
         <div data-action="click->game#playWrongAnswer2">
           <%# Audio of the second card %>
           <% if female %>
-            <%= cl_video_tag @game.videos[2].key, data: { game_target: "wrongAnswer2" } %>
+            <%= cl_video_tag @game.videos[2].key, class: "d-none", data: { game_target: "wrongAnswer2" } %>
           <% else %>
-            <%= cl_video_tag @game.videos[3].key, data: { game_target: "wrongAnswer2" } %>
+            <%= cl_video_tag @game.videos[3].key, class: "d-none", data: { game_target: "wrongAnswer2" } %>
           <% end %>
           <%= cl_image_tag @game.photos[1].key, height: 130, width: 130, crop: :fill %>
         </div>
@@ -64,9 +64,9 @@
         <div data-action="click->game#playWrongAnswer3">
           <%# Audio for the third card %>
           <% if female %>
-            <%= cl_video_tag @game.videos[4].key, data: { game_target: "wrongAnswer3" } %>
+            <%= cl_video_tag @game.videos[4].key, class: "d-none", data: { game_target: "wrongAnswer3" } %>
           <% else %>
-            <%= cl_video_tag @game.videos[5].key, data: { game_target: "wrongAnswer3" } %>
+            <%= cl_video_tag @game.videos[5].key, class: "d-none", data: { game_target: "wrongAnswer3" } %>
           <% end %>
           <%= cl_image_tag @game.photos[2].key, height: 130, width: 130, crop: :fill %>
         </div>
@@ -76,9 +76,9 @@
         <div data-action="click->game#playWin">
           <%# Audio for the winner card %>
           <% if female %>
-            <%= cl_video_tag @game.videos[6].key, data: { game_target: "win"  } %>
+            <%= cl_video_tag @game.videos[6].key, class: "d-none", data: { game_target: "win"  } %>
           <% else %>
-            <%= cl_video_tag @game.videos[7].key, data: { game_target: "win"  } %>
+            <%= cl_video_tag @game.videos[7].key, class: "d-none", data: { game_target: "win"  } %>
           <% end %>
           <%= cl_image_tag @game.photos[3].key, height: 130, width: 130, crop: :fill %>
         </div>
