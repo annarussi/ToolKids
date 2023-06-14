@@ -35,7 +35,7 @@
       <div data-action="click->avatar#tarzanAvatar">
         <audio src="<%= audio_path 'Tarzan.mp3'%>" data-avatar-target="tarzan"></audio>
         <%= cl_image_tag @tarzan.photo.key, class:"avatar shadow avatar-edit"  %>
-        <h4 class="avatar-edit text-center mt-3"><%= @tarzan.name %></h4>
+        <h4 class="avatar-edit text-center mt-3"><%= @tarzan.name.capitalize %></h4>
       </div>
     </div>
 

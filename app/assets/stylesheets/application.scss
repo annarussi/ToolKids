@@ -6,13 +6,15 @@
 // External libraries
 @import "bootstrap/scss/bootstrap";
 @import "font-awesome";
+@import url('https://fonts.googleapis.com/css2?family=Short+Stack&display=swap');
 
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
 
+
 body {
   background-color: #FFFCE2;
   color: #422917;
+  font-family: 'Short Stack', cursive;
 }
-
