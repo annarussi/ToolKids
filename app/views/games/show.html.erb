@@ -36,9 +36,9 @@
         <div data-action="click->game#playAzul">
           <%# Audio of the first card %>
           <% if female %>
-          <audio src="<%= audio_path 'azul.mp3' %>" data-game-target="azul"></audio>
+          <%= cl_video_tag @game.videos[0].key, data: { game_target: "azul"  } %>
           <% else %>
-          <audio src="<%= audio_path 'amarelo.mp3'%>" data-game-target="azul"></audio>
+          <%= cl_video_tag @game.videos[0].key, data: { game_target: "azul"  } %>
           <% end %>
           <%= cl_image_tag @game.photos[0].key, height: 130, width: 130, crop: :fill %>
         </div>
@@ -85,7 +85,6 @@
       </div>
 
     </div>
-
     <footer>
       <%= link_to lecture_kid_game_path(@game.kid, @game) do %>
         <h2 class="game-btn"><i class="fa-solid fa-arrow-left"></i> Back to lesson</h2>
