@@ -17,7 +17,7 @@
 
     <h1><%= @game.name %></h1>
 
-    <div class="my-4" data-action="click->game#playSound">
+    <div class="my-5" data-action="click->game#playSound">
       <%# Audio of the exercise %>
       <% if female %>
         <%= cl_video_tag @game.videos[8].key, class: "d-none", data: { game_target: "exercise" } %>
