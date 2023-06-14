@@ -24,7 +24,7 @@ export default class extends Controller {
       if (response.ok) {
       // Redirecionamento para outra view
       Turbo.visit(`/kids/${kidId}/edit`);
-    }}), 1000);
+    }}), 3000);
   }
 
   pocahontasAvatar() {
@@ -40,7 +40,7 @@ export default class extends Controller {
       if (response.ok) {
       // Redirecionamento para outra view
       Turbo.visit(`/kids/${kidId}/edit`);
-    }}), 1000);
+    }}), 3000);
   }
 
   mogliAvatar() {
@@ -56,7 +56,7 @@ export default class extends Controller {
       if (response.ok) {
       // Redirecionamento para outra view
       Turbo.visit(`/kids/${kidId}/edit`);
-    }}), 1000);
+    }}), 3000);
   }
 
   tarzanAvatar() {
@@ -72,7 +72,7 @@ export default class extends Controller {
       if (response.ok) {
       // Redirecionamento para outra view
       Turbo.visit(`/kids/${kidId}/edit`);
-    }}), 1000);
+    }}), 3000);
   }
 
   simbaAvatar() {
@@ -88,7 +88,7 @@ export default class extends Controller {
       if (response.ok) {
       // Redirecionamento para outra view
       Turbo.visit(`/kids/${kidId}/edit`);
-    }}), 1000);
+    }}), 3000);
   }
 
   arielAvatar() {
@@ -104,6 +104,6 @@ export default class extends Controller {
       if (response.ok) {
       // Redirecionamento para outra view
       Turbo.visit(`/kids/${kidId}/edit`);
-    }}), 1000);
+    }}), 3000);
   }
 }
