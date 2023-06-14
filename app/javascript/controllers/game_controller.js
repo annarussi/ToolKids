@@ -5,7 +5,7 @@ import { Turbo } from "@hotwired/turbo-rails";
 
 // Connects to data-controller="game"
 export default class extends Controller {
-  static targets = ["gameId", "kidId", "avatar", "exercise", "win", "wrongAnswer1", "wrongAnswer2", "wrongAnswer3", "wrongAnswer1Card", "wrongAnswer2Card", "wrongAnswer3Card"]
+  static targets = ["gameId", "kidId", "exercise", "win", "wrongAnswer1", "wrongAnswer2", "wrongAnswer3", "wrongAnswer1Card", "wrongAnswer2Card", "wrongAnswer3Card"]
 
   connect() {
     console.log("game is here")
@@ -22,8 +22,6 @@ export default class extends Controller {
     const kidId = this.kidIdTarget.innerText.trim();
     const gameId = this.gameIdTarget.innerText.trim();
 
-    this.avatarTarget.classList.remove('d-none')
-
     this.winTarget.play()
 
     setTimeout(() =>
@@ -34,7 +32,7 @@ export default class extends Controller {
         if (response.ok) {
         // Redirecionamento para outra view
         Turbo.visit(`/kids/${kidId}/games`);
-      }}), 10000);
+      }}), 3000);
   }
 
 
