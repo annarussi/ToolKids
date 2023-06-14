@@ -1,11 +1,12 @@
   <div class="container" data-controller="game">
-    <h1><%= @game.name %></h1>
-    <h1>MIGUELION VIDEO HERE</h1>
-    <footer>
-      <%= link_to kid_games_path do %>
-        <i class="fa-solid fa-map"></i>
-      <% end %>
 
-      <%= link_to "Let's play!", kid_game_path(@game) %>
-    </footer>
+    <div class="d-flex justify-content-center mt-4">
+
+      <%= cl_video_tag @game.videos[10].key, :controls => true, width:"350px", class:"card-lecture shadow" %>
+
+    </div>
+
+    <div class="mt-5 d-flex justify-content-center">
+      <%= link_to "Let's play!", kid_game_path(@game), class:"btn-brown" %>
+    </div>
   </div>
