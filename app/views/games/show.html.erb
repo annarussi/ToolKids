@@ -20,9 +20,9 @@
     <div class="my-4" data-action="click->game#playSound">
       <%# Audio of the exercise %>
       <% if female %>
-        <audio src="<%= audio_path 'vermelho.mp3'%>" data-game-target="exercise"></audio>
+        <%= cl_video_tag @game.videos[8].key, data: { game_target: "exercise" } %>
       <% else %>
-        <audio src="<%= audio_path 'amarelo.mp3'%>" data-game-target="exercise"></audio>
+        <%= cl_video_tag @game.videos[9].key, data: { game_target: "exercise" } %>
       <% end %>
 
       <div class="card audio-game">
@@ -32,25 +32,25 @@
 
     <div class="d-flex justify-content-evenly my-3">
 
-      <div class="card rounded-4" data-game-target="azulCard">
-        <div data-action="click->game#playAzul">
+      <div class="card rounded-4" data-game-target="wrongAnswer1Card">
+        <div data-action="click->game#playWrongAnswer1">
           <%# Audio of the first card %>
           <% if female %>
-          <%= cl_video_tag @game.videos[0].key, data: { game_target: "azul"  } %>
+            <%= cl_video_tag @game.videos[0].key, data: { game_target: "wrongAnswer1" } %>
           <% else %>
-          <%= cl_video_tag @game.videos[0].key, data: { game_target: "azul"  } %>
+            <%= cl_video_tag @game.videos[1].key, data: { game_target: "wrongAnswer1" } %>
           <% end %>
           <%= cl_image_tag @game.photos[0].key, height: 130, width: 130, crop: :fill %>
         </div>
       </div>
 
-      <div class="card rounded-4" data-game-target="amareloCard">
-        <div data-action="click->game#playAmarelo">
+      <div class="card rounded-4" data-game-target="wrongAnswer2Card">
+        <div data-action="click->game#playWrongAnswer2">
           <%# Audio of the second card %>
           <% if female %>
-          <audio src="<%= audio_path 'amarelo.mp3' %>" data-game-target="amarelo"></audio>
+            <%= cl_video_tag @game.videos[2].key, data: { game_target: "wrongAnswer2" } %>
           <% else %>
-          <audio src="<%= audio_path 'amarelo.mp3'%>" data-game-target="amarelo"></audio>
+            <%= cl_video_tag @game.videos[3].key, data: { game_target: "wrongAnswer2" } %>
           <% end %>
           <%= cl_image_tag @game.photos[1].key, height: 130, width: 130, crop: :fill %>
         </div>
@@ -60,13 +60,13 @@
 
     <div class="d-flex justify-content-evenly">
 
-      <div class="card rounded-4" data-game-target="verdeCard">
-        <div data-action="click->game#playVerde">
+      <div class="card rounded-4" data-game-target="wrongAnswer3Card">
+        <div data-action="click->game#playWrongAnswer3">
           <%# Audio for the third card %>
           <% if female %>
-          <audio src="<%= audio_path 'verde.mp3' %>" data-game-target="verde"></audio>
+            <%= cl_video_tag @game.videos[4].key, data: { game_target: "wrongAnswer3" } %>
           <% else %>
-          <audio src="<%= audio_path 'amarelo.mp3'%>" data-game-target="verde"></audio>
+            <%= cl_video_tag @game.videos[5].key, data: { game_target: "wrongAnswer3" } %>
           <% end %>
           <%= cl_image_tag @game.photos[2].key, height: 130, width: 130, crop: :fill %>
         </div>
@@ -76,9 +76,9 @@
         <div data-action="click->game#playWin">
           <%# Audio for the winner card %>
           <% if female %>
-          <audio src="<%=audio_path 'vermelho_win.mp3' %>" data-game-target="win"></audio>
+            <%= cl_video_tag @game.videos[6].key, data: { game_target: "win"  } %>
           <% else %>
-          <audio src="<%= audio_path 'amarelo.mp3'%>" data-game-target="win"></audio>
+            <%= cl_video_tag @game.videos[7].key, data: { game_target: "win"  } %>
           <% end %>
           <%= cl_image_tag @game.photos[3].key, height: 130, width: 130, crop: :fill %>
         </div>

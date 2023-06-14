@@ -5,7 +5,7 @@ import { Turbo } from "@hotwired/turbo-rails";
 
 // Connects to data-controller="game"
 export default class extends Controller {
-  static targets = ["gameId", "kidId", "exercise", "win", "azul", "amarelo", "verde", "azulCard", "amareloCard", "verdeCard"]
+  static targets = ["gameId", "kidId", "exercise", "win", "wrongAnswer1", "wrongAnswer2", "wrongAnswer3", "wrongAnswer1Card", "wrongAnswer2Card", "wrongAnswer3Card"]
 
   connect() {
     console.log("game is here")
@@ -35,28 +35,30 @@ export default class extends Controller {
       }}), 3000);
   }
 
-  playAzul() {
-    this.azulTarget.play()
-    this.azulCardTarget.classList.add('game-card')
 
+  playWrongAnswer1() {
+    this.wrongAnswer1Target.play()
+    this.wrongAnswer1CardTarget.classList.add('game-card')
+    
     setTimeout(() =>
-    this.azulCardTarget.classList.remove('game-card'), 1000);
+    this.wrongAnswer1CardTarget.classList.remove('game-card'), 1000);
   }
 
-  playAmarelo() {
-    this.amareloTarget.play()
-    this.amareloCardTarget.classList.add('game-card')
-
+  playWrongAnswer2() {
+    this.wrongAnswer2Target.play()
+    this.wrongAnswer2CardTarget.classList.add('game-card')
+    
     setTimeout(() =>
-    this.amareloCardTarget.classList.remove('game-card'), 1000);
+    this.wrongAnswer2CardTarget.classList.remove('game-card'), 1000);
   }
 
-  playVerde() {
-    this.verdeTarget.play()
-    this.verdeCardTarget.classList.add('game-card')
-
+  playWrongAnswer3() {
+    this.wrongAnswer3Target.play()
+    this.wrongAnswer3CardTarget.classList.add('game-card')
+    
     setTimeout(() =>
-    this.verdeCardTarget.classList.remove('game-card'), 1000);
+    this.wrongAnswer3CardTarget.classList.remove('game-card'), 1000);
+
   }
 
 }
