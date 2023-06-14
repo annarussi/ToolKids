@@ -8,12 +8,9 @@
 
   <div class="card-level shadow">
     <div>
-      <h2><strong>Level <%= @kid.total_score + 1 %><strong></h2>
-      <h4>score: <%= @kid.total_score %></h4>
-      <hr>
-      <h4>Here are your treasures!</h4>
-      <p>Keep the adventure going</p>
-      <div class="treasures">
+      <h2><strong>LEVEL <%= @kid.total_score + 1 %><strong></h2>
+      <h5 class="mb-4" style="color:#f5bb47;">SCORE: <%= @kid.total_score %></h5>
+      <div class="treasures mt-3">
         <% @kid.total_score.times do %>
           <%= image_tag "treasure-open.png", id: "treasure-open", alt: "chest closed", width: 60 %>
         <% end %>
@@ -23,4 +20,6 @@
       </div>
     </div>
   </div>
+
+  <%= image_tag "crab.png", id: "crab", alt: "crab", width: 100 %>
 </div>

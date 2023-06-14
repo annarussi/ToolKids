@@ -11,3 +11,50 @@
 #treasure-closed {
   filter: drop-shadow(0px 0px 2px rgb(112, 112, 112));
 }
+
+.card-profile {
+  position: relative;
+}
+
+#crab {
+  position: absolute;
+  bottom: 40px;
+  left: 70px;
+  animation: moveToRight 3.5s ease-in-out infinite;
+}
+
+@keyframes moveToRight {
+  0% {
+    transform: translateX(-50px) rotate(-10deg);
+  }
+  10% {
+    transform: translateX(0px) rotate(10deg);
+  }
+  20% {
+    transform: translateX(50px) rotate(-10deg);
+  }
+  30% {
+    transform: translateX(100px) rotate(10deg);
+  }
+  40% {
+    transform: translateX(150px) rotate(-10deg);
+  }
+  50% {
+    transform: translateX(200px) rotate(10deg);
+  }
+  60% {
+    transform: translateX(150px) rotate(-10deg);
+  }
+  70% {
+    transform: translateX(100px) rotate(10deg);
+  }
+  80% {
+    transform: translateX(50px) rotate(-10deg);
+  }
+  90% {
+    transform: translateX(0px) rotate(10deg);
+  }
+  100% {
+    transform: translateX(-50px) rotate(-10deg);
+  }
+}

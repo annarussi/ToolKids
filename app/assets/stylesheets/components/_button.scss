@@ -1,25 +1,66 @@
 .btn-brown{
   padding: 5px 20px;
-  background-color: #fcf1e0;
-  box-shadow: 1px 1px 5px #b4914c;
+  background-color: #74AA4F;
+  box-shadow: 0px 5px 0px #6ea04d;
   border-radius: 10px;
   font-weight: lighter;
   font-size: 20px;
-  color: #be8616;
+  color: white;
   font-weight: bold;
   margin-top: 0px;
   padding-top: 10px;
+  animation: wiggle 2s linear infinite;
+}
+
+@keyframes wiggle {
+  0%, 7% {
+    transform: rotateZ(0);
+  }
+  15% {
+    transform: rotateZ(-15deg);
+  }
+  20% {
+    transform: rotateZ(10deg);
+  }
+  25% {
+    transform: rotateZ(-10deg);
+  }
+  30% {
+    transform: rotateZ(6deg);
+  }
+  35% {
+    transform: rotateZ(-4deg);
+  }
+  40%, 100% {
+    transform: rotateZ(0);
+  }
+}
+
+.btn-brown:active {
+  box-shadow: none;
+  transform: translateY(5px);
 }
 
 .add-icon {
-  color: #b4914c;
   font-size: 48px;
-  margin-top: 20px;
+  margin-top: 10px;
   text-decoration: none;
+  padding: 5px 20px;
+  background-color: white;
+  box-shadow: 0px 5px 0px white;
+  border-radius: 10px;
+  color: #74AA4F;
+  font-weight: bold;
+  padding-top: 10px;
+}
+
+.add-icon:active {
+  box-shadow: none;
+  transform: translateY(5px);
 }
 
 .trash-icon {
-  color: #b4914c;
+  color: #74AA4F;
   font-size: 18px;
   padding-top: 15px;
   text-decoration: none;
