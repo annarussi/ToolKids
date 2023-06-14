@@ -1,29 +1,51 @@
 <div class="d-flex justify-content-between map-bg" style="height:15vh;">
 
-  <div id="mySidenav" class="sidenav">
+  <div id="mySidenav" class="sidenav rounded-end-4">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 
     <%= cl_image_tag kid.avatar.photo.key, class:"image-sidebar" %>
 
-    <h2 class="sidebar-text"><%= kid.nickname %></h2><br>
+    <p class="sidebar-nickname"><%= kid.nickname %></p>
 
-    <h2 class="sidebar-text">Level <%= kid.total_score + 1 %></h2>
+    <hr class="pill">
 
-    <hr>
+    <h2 class="sidebar-text text-nowrap overflow-hidden"> LEVEL <br>
+     <i class="fa-solid fa-bolt mt-3"></i> <%= kid.total_score + 1 %>
+    </h2>
 
-    <h2><%= link_to "Profile", kid_path(kid), class:"sidebar-text" %></h2>
+    <hr class="pill">
 
-    <h2><%= link_to "Treasure map", kid_games_path(kid), class:"sidebar-text" %></h2>
+    <h2 class="mt-4">
+      <%= link_to kid_path(kid), class:"sidebar-title" do %>
+        <i class="fa-solid fa-house-user pb-2"></i>
+        <h5> PROFILE </h5>
+      <% end %>
+    </h2>
 
-    <h2><%= link_to "Change your avatar", edit_kid_path(kid), class:"sidebar-text" %></h2>
+    <h2>
+      <%= link_to kid_games_path(kid), class:"sidebar-title" do %>
+        <i class="fa-solid fa-map pb-2"></i>
+        <h5> MAP</h5>
+      <% end %>
+    </h2>
 
-    <hr>
+    <h2>
+      <%= link_to edit_kid_path(kid), class:"sidebar-title" do %>
+        <i class="fa-solid fa-circle-user pb-2"></i>
+        <h5> AVATAR </h5>
+      <% end %>
+    </h2>
 
-    <h2><%= link_to "Players", kids_path(kid), class:"sidebar-text" %></h2>
+    <hr class="pill">
 
+    <h2>
+      <%= link_to kids_path(kid), class:"sidebar-players" do %>
+        <i class="fa-solid fa-user-plus pb-2"></i>
+        <h5> PLAYERS </h5>
+      <% end %>
+    </h2>
 
-    <hr>
-
+    <hr class="pill">
 
   </div>
 
@@ -32,7 +54,7 @@
 
   <script>
   function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("mySidenav").style.width = "200px";
   }
 
 

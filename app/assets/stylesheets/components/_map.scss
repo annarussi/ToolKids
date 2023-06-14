@@ -51,6 +51,7 @@
 .blocked-game {
   filter: drop-shadow(1px 1px 16px rgb(85, 84, 84));
 }
+
 #current-game {
   animation: scalechest 1.2s .3s infinite;
   -moz-animation: scalechest 1.2s .3s infinite;
@@ -81,4 +82,33 @@
   0% { scale: 1; }
   50% { scale: 1.5; }
   100% { scale: 1; }
+}
+
+#boat {
+  position: absolute;
+  top: 20px;
+  left: 70px;
+  animation: moveBoat 10s ease-in-out infinite,
+}
+
+@keyframes moveBoat {
+  0% {
+    transform: translateX(-50px) rotate3d(0, 1, 0, 180deg);
+  }
+
+  50% {
+    transform: translateX(200px) rotate3d(0, 1, 0, 180deg);
+  }
+
+  51% {
+    transform: translateX(200px) rotate3d(0, 0, 0, 0deg);
+  }
+
+  99% {
+    transform: translateX(-50px) rotate3d(0, 0, 0, 0deg);
+  }
+
+  100% {
+    transform: translateX(-50px) rotate3d(0, 1, 0, 180deg);
+  }
 }
