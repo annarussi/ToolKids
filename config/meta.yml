@@ -1,6 +1,6 @@
-meta_product_name: "KidSpeak"
+meta_name: "KidSpeak"
 meta_title: "KidSpeak - The adventure of learning"
 meta_description: "KidSpeak is the perfect tool for kids to learn anothe language in a easy and familiar way"
 #not yet
-meta_image: "logo.png" # should exist in `app/assets/images/`
+meta_image: "ks-logo.png" # should exist in `app/assets/images/`
 #twitter_account: "@product_twitter_account"   # required for Twitter Cards
