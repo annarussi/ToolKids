@@ -43,16 +43,15 @@
     <div class="d-flex justify-content-around mt-4 mb-2">
       <div data-action="click->avatar#simbaAvatar">
         <audio src="<%= audio_path 'Simba.mp3'%>" data-avatar-target="simba"></audio>
-        <%= cl_image_tag @simba.photo.key, class:"avatar shadow avatar-edit"  %>
+        <%= cl_image_tag @simba.photo.key, class:"avatar shadow avatar-edit avatar-win"  %>
         <h4 class="avatar-edit text-center mt-3"><%= @simba.name.capitalize %></h4>
       </div>
-
   <% end %>
 
   <% if @kid.total_score >= 2 %>
       <div data-action="click->avatar#arielAvatar">
         <audio src="<%= audio_path 'A-Ariel.mp3'%>" data-avatar-target="ariel"></audio>
-        <%= cl_image_tag @ariel.photo.key, class:"avatar shadow avatar-edit"  %>
+        <%= cl_image_tag @ariel.photo.key, class:"avatar shadow avatar-edit avatar-win"  %>
         <h4 class="avatar-edit text-center mt-3"><%= @ariel.name.capitalize %></h4>
       </div>
   <% end %>
