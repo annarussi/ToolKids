@@ -78,6 +78,11 @@ class CreateGames
     game_colors.videos.attach(io: fileexercise, filename: "f-exercise.mp3", content_type: "audio/mpeg")
 
 
+    # lecture video
+    filelecture = URI.open("https://res.cloudinary.com/dhku8hlz9/video/upload/v1686751369/lecture_iydned.mp4")
+    game_colors.videos.attach(io: filelecture, filename: "color-lecture.mp4", content_type: "video/webm")
+
+
   end
 
   def game_animals
