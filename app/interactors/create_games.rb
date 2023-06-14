@@ -18,14 +18,22 @@ class CreateGames
     fileblue = URI.open("https://res.cloudinary.com/dhku8hlz9/image/upload/v1686224730/ci66vxhb0wpbexursb6m.png")
     game_colors.photos.attach(io: fileblue, filename: "blue.png", content_type: "image/png")
 
+    fileblue = URI.open("https://res.cloudinary.com/dhku8hlz9/video/upload/v1686732030/A-Azul_usvjzh.mp3")
+    game_colors.videos.attach(io: fileblue, filename: "azul.mp3", content_type: "audio/mpeg")
+
     fileyellow = URI.open("https://res.cloudinary.com/dhku8hlz9/image/upload/v1686224762/vs3k9plgsh2cclepgze8.png")
     game_colors.photos.attach(io: fileyellow, filename: "yellow.png", content_type: "image/png")
+
 
     filegreen = URI.open("https://res.cloudinary.com/dhku8hlz9/image/upload/v1686224779/pusmec8ipokomlwmmxqc.png")
     game_colors.photos.attach(io: filegreen, filename: "green.png", content_type: "image/png")
 
+
+
     filered = URI.open("https://res.cloudinary.com/dhku8hlz9/image/upload/v1686224795/y7dxvwjwh6j1xfsks1iw.png")
     game_colors.photos.attach(io: filered, filename: "red.png", content_type: "image/png")
+
+
   end
 
   def game_animals
