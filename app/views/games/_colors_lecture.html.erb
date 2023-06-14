@@ -1,4 +1,4 @@
-  <div class="container" data-controller="game">
+  <div class="container">
 
     <div class="d-flex justify-content-center mt-4">
 
@@ -7,6 +7,6 @@
     </div>
 
     <div class="mt-5 d-flex justify-content-center">
-      <%= link_to "Let's play!", kid_game_path(@game), class:"btn-brown" %>
+      <%= link_to "Let's play!", kid_game_path(@kid, @game), class:"btn-brown" %>
     </div>
   </div>
