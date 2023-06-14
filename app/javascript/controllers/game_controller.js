@@ -35,19 +35,30 @@ export default class extends Controller {
       }}), 3000);
   }
 
+
   playWrongAnswer1() {
     this.wrongAnswer1Target.play()
     this.wrongAnswer1CardTarget.classList.add('game-card')
+    
+    setTimeout(() =>
+    this.wrongAnswer1CardTarget.classList.remove('game-card'), 1000);
   }
 
   playWrongAnswer2() {
     this.wrongAnswer2Target.play()
     this.wrongAnswer2CardTarget.classList.add('game-card')
+    
+    setTimeout(() =>
+    this.wrongAnswer2CardTarget.classList.remove('game-card'), 1000);
   }
 
   playWrongAnswer3() {
     this.wrongAnswer3Target.play()
     this.wrongAnswer3CardTarget.classList.add('game-card')
+    
+    setTimeout(() =>
+    this.wrongAnswer3CardTarget.classList.remove('game-card'), 1000);
+
   }
 
 }
