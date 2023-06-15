@@ -2,7 +2,11 @@
 
     <div class="d-flex justify-content-center mt-4">
 
-      <%= cl_video_tag @game.videos[10].key, :controls => true, width:"350px", class:"card-lecture shadow" %>
+      <% if @kid.total_score == 0 %>
+        <%= cl_video_tag @game.videos[10].key, :controls => true, width:"350px", class:"card-lecture shadow" %>
+      <% elsif @kid.total_score == 1 %>
+        <%= cl_video_tag @game.videos[10].key, :controls => true, width:"350px", class:"card-lecture shadow" %>
+      <% end %>
 
     </div>
 

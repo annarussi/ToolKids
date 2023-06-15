@@ -151,7 +151,7 @@ class CreateGames
     game_animals.videos.attach(io: file5, filename: "f-exercise.mp3", content_type: "audio/mpeg")
 
 
-    file6 = URI.open("https://res.cloudinary.com/dhku8hlz9/video/upload/v1686751369/lecture_iydned.mp4")
+    file6 = URI.open("https://res.cloudinary.com/dhku8hlz9/video/upload/v1686831527/ee964167c883afed556efaa902e232c38f89026184d9688ce963a15b8c78ccab_mmye80.mp4")
     game_animals.videos.attach(io: file6, filename: "animal-lecture.mp4", content_type: "video/webm")
 
   end
