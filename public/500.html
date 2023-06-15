@@ -5,14 +5,18 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <style>
   .rails-default-error-page {
-    background-color: #EFEFEF;
+    background-color: #FFFCE2;
     color: #2E2F30;
     text-align: center;
-    font-family: arial, sans-serif;
-    margin: 0;
+    font-family: 'Short Stack', cursive;
+    margin-top: 100px;
   }
 
-  .rails-default-error-page div.dialog {
+  .img-error {
+    width: 350px;
+  }
+
+  /* .rails-default-error-page div.dialog {
     width: 95%;
     max-width: 33em;
     margin: 4em auto 0;
@@ -40,7 +44,7 @@
   .rails-default-error-page div.dialog > p {
     margin: 0 0 1em;
     padding: 1em;
-    background-color: #F7F7F7;
+    background-cpxolor: #F7F7F7;
     border: 1px solid #CCC;
     border-right-color: #999;
     border-left-color: #999;
@@ -50,17 +54,19 @@
     border-top-color: #DADADA;
     color: #666;
     box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
-  }
+  } */
   </style>
 </head>
 
 <body class="rails-default-error-page">
   <!-- This file lives in public/500.html -->
   <div class="dialog">
-    <div>
-      <h1>We're sorry, but something went wrong.</h1>
-    </div>
-    <p>If you are the application owner check the logs for more information.</p>
+    
+      <h1>500. </h1>
+      <p>Unexpected error</p>
+
   </div>
+
+  <img src="500page.png" class="img-error">
 </body>
 </html>
