@@ -1,18 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Ooops! Something went wrong</title>
+  <title>Ooops! We couldn't find this page</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <style>
   .rails-default-error-page {
     background-color: #FFFCE2;
     color: #2E2F30;
-    text-align: left;
+    text-align: center;
     font-family: 'Short Stack', cursive;
     margin: 0;
-    background-image: url('404.gif');
-    background-repeat: no-repeat;
   }
 
   .rails-default-error-page div.dialog {
@@ -24,9 +22,13 @@
   .img-logo {
     width: 100px;
     display: block;
-    margin-left: 100px;
-    margin-bottom: 300px;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 20px;
+  }
+
+  .error {
+    color: rgb(178, 61, 61);
   }
 
   </style>
@@ -38,9 +40,12 @@
   <img src="ks-logo.png" class="img-logo">
 
   <div class="dialog">
+    <h1 class="error">404 error</h1>
     <h1>Ooooops!</h1>
     <p>It seems you've lost your map</p>
   </div>
+
+  <img src="404.gif" class="gif" width="110%">
 
 </body>
 </html>
