@@ -1,6 +1,6 @@
 <h1>KIDSPEAK</h1>
 www.kidspeak.me
-
+<br>
 During the final two weeks of the nine-week Le Wagon Bootcamp, our group embarked on an ambitious project to develop a laguage-learning mobile app aimed at helping immigrant children learn the local language through a variety of games.
 
 The core objective of KidSpeak was to make language learning fun and accessible. The idea is to engage young learners with
@@ -11,7 +11,3 @@ We used a diverse range of programming languages and technologies. Our backend w
 Due to time constraints (having only two weeks to think, build and deploy it), KidSpeak is not yet a fully polished product. It is only a demo meant to be presented as a final project of a bootcamp and to show its potential for further development, which is currently being planned. **Thus, for the time being, the app can be better seen in a mobile format (particularly Iphone 12 Pro, using Chrome's inspect tool)**.
 
 https://github.com/annarussi/ToolKids/assets/130978987/fa9f49d1-af71-42d1-9d74-a09c7bbaec3a
-
-<img width="314" alt="ks-2" src="https://github.com/annarussi/ToolKids/assets/130978987/33675957-c225-4da5-bb98-75c207d3613f">
-
-
