@@ -1,6 +1,6 @@
 <h1>KIDSPEAK</h1>
-www.kidspeak.me
-<br>
+<h3>www.kidspeak.me</h3>
+
 During the final two weeks of the nine-week Le Wagon Bootcamp, our group embarked on an ambitious project to develop a laguage-learning mobile app aimed at helping immigrant children learn the local language through a variety of games.
 
 The core objective of KidSpeak was to make language learning fun and accessible. The idea is to engage young learners with
