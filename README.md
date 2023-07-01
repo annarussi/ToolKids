@@ -14,7 +14,7 @@ This Project was built using Ruby on Rails 7.0.5.
 
 ## Run Locally
 
-Clone the project:
+Clone the project
 
 ```bash
   git clone https://github.com/annarussi/ToolKids
@@ -46,6 +46,12 @@ Create DB
   bin/rails db:seed
 ```
 
+Create .env file. Inside, insert Cloudinary Key
+
+```bash
+  CLOUDINARY_URL=cloudinary://321796341113655:eMgcJFMGohYSjeu-6ZNWTtXmN1o@dhku8hlz9
+```
+
 Start the server with
 
 ```bash
@@ -60,7 +66,8 @@ and open it on your browser
   http://[::1]:3000/
 ```
 
-To log-in use:
+To log-in use
+
 ```bash
 user: lishina@gmail.com
 ```
