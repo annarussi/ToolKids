@@ -46,12 +46,6 @@ Create DB
   bin/rails db:seed
 ```
 
-Create .env file. Inside, insert Cloudinary Key
-
-```bash
-  CLOUDINARY_URL=cloudinary://321796341113655:eMgcJFMGohYSjeu-6ZNWTtXmN1o@dhku8hlz9
-```
-
 Start the server with
 
 ```bash
