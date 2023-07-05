@@ -47,8 +47,8 @@ class CreateGames
     game_colors.photos.attach(io: filegreen, filename: "green.png", content_type: "image/png")
 
     # audio verde ana
-    filegreen = URI.open("https://res.cloudinary.com/dhku8hlz9/video/upload/v1686732076/A-Verde_cxxqzm.mp3")
-    game_colors.videos.attach(io: filegreen, filename: "a-verde.mp3", content_type: "audio/mpeg")
+    # filegreen = URI.open("https://res.cloudinary.com/dhku8hlz9/video/upload/v1686732076/A-Verde_cxxqzm.mp3")
+    # game_colors.videos.attach(io: filegreen, filename: "a-verde.mp3", content_type: "audio/mpeg")
 
     # audio verde francisco
     filegreen = URI.open("https://res.cloudinary.com/dhku8hlz9/video/upload/v1686732146/F-Verde_bpcqk3.mp3")
