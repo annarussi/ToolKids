@@ -6,7 +6,7 @@ class CreateGames
   def call
     game_colors
     game_animals
-    game_objects
+    game_fruits
     game_verbs
   end
 
@@ -65,9 +65,30 @@ class CreateGames
 
   end
 
-  def game_objects
-    game_objects = Game.new(name: "Objects", level: 3, kid: context.kid)
-    game_objects.save
+  def game_fruits
+    game_fruits = Game.new(name: "Fruits", level: 3, kid: context.kid)
+    game_fruits.save
+
+    # melancia image
+    filemelancia = URI.open("https://res.cloudinary.com/dhku8hlz9/image/upload/v1688577181/melancia_slv3dz.png")
+    game_fruits.photos.attach(io: filemelancia, filename: "melancia.png", content_type: "image/png")
+
+    # abacaxi image
+    fileabacaxi = URI.open("https://res.cloudinary.com/dhku8hlz9/image/upload/v1688577181/63b2542a-3096-474a-ab60-71248df33e0a_kewxaw.png")
+    game_fruits.photos.attach(io: fileabacaxi, filename: "abacaxi.png", content_type: "image/png")
+
+    # uva image
+    fileuva = URI.open("https://res.cloudinary.com/dhku8hlz9/image/upload/v1688577181/b402a927-e27f-4988-bc02-1477a424e3fb_rpuues.png")
+    game_fruits.photos.attach(io: fileuva, filename: "uva.png", content_type: "image/png")
+
+    # morango image
+    filemorango = URI.open("https://res.cloudinary.com/dhku8hlz9/image/upload/v1688577181/6452a1c9-8b3d-4890-9c98-3ad043898c9b_wdjnl0.png")
+    game_fruits.photos.attach(io: filemorango, filename: "morango.png", content_type: "image/png")
+
+    # fruits lecture (ainda está animal lecture)
+    filelecture = URI.open("https://res.cloudinary.com/dhku8hlz9/video/upload/v1686831527/ee964167c883afed556efaa902e232c38f89026184d9688ce963a15b8c78ccab_mmye80.mp4")
+    game_fruits.videos.attach(io: filelecture, filename: "fruits-lecture.mp4", content_type: "video/webm")
+
   end
 
   def game_verbs

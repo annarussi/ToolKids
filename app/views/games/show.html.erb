@@ -27,6 +27,10 @@
             <audio src="<%= audio_path 'A-Leao.mp3'%>" data-game-target= "exercise"></audio>
           <% elsif @game.name == "Animals" %>
             <audio src="<%= audio_path 'F-Leao.mp3'%>" data-game-target= "exercise"></audio>
+          <% elsif female && @game.name == "Fruits" %>
+            <audio src="<%= audio_path 'A-Leao.mp3'%>" data-game-target= "exercise"></audio>
+          <% elsif @game.name == "Fruits" %>
+            <audio src="<%= audio_path 'F-Leao.mp3'%>" data-game-target= "exercise"></audio>
           <% end %>
 
       <div class="card audio-game">
@@ -47,6 +51,10 @@
             <audio src="<%= audio_path 'A-Elefante.mp3'%>" data-game-target= "wrongAnswer1"></audio>
           <% elsif @game.name == "Animals" %>
             <audio src="<%= audio_path 'F-Elefante.mp3'%>" data-game-target= "wrongAnswer1"></audio>
+          <% elsif female && @game.name == "Fruits" %>
+            <audio src="<%= audio_path 'A-Leao.mp3'%>" data-game-target= "wrongAnswer1"></audio>
+          <% elsif @game.name == "Fruits" %>
+            <audio src="<%= audio_path 'F-Leao.mp3'%>" data-game-target= "wrongAnswer1"></audio>
           <% end %>
           <%= cl_image_tag @game.photos[0].key, height: 130, width: 130, crop: :fill %>
         </div>
@@ -63,6 +71,10 @@
             <audio src="<%= audio_path 'A-Girafa.mp3'%>" data-game-target= "wrongAnswer2"></audio>
           <% elsif @game.name == "Animals" %>
             <audio src="<%= audio_path 'F-Girafa.mp3'%>" data-game-target= "wrongAnswer2"></audio>
+          <% elsif female && @game.name == "Fruits" %>
+            <audio src="<%= audio_path 'A-Leao.mp3'%>" data-game-target= "wrongAnswer2"></audio>
+          <% elsif @game.name == "Fruits" %>
+            <audio src="<%= audio_path 'F-Leao.mp3'%>" data-game-target= "wrongAnswer2"></audio>
           <% end %>
           <%= cl_image_tag @game.photos[1].key, height: 130, width: 130, crop: :fill %>
         </div>
@@ -83,6 +95,10 @@
             <audio src="<%= audio_path 'A-Tigre.mp3'%>" data-game-target= "wrongAnswer3"></audio>
           <% elsif @game.name == "Animals" %>
             <audio src="<%= audio_path 'F-Tigre.mp3'%>" data-game-target= "wrongAnswer3"></audio>
+          <% elsif female && @game.name == "Fruits" %>
+            <audio src="<%= audio_path 'A-Leao.mp3'%>" data-game-target= "wrongAnswer3"></audio>
+          <% elsif @game.name == "Fruits" %>
+            <audio src="<%= audio_path 'F-Leao.mp3'%>" data-game-target= "wrongAnswer3"></audio>
           <% end %>
           <%= cl_image_tag @game.photos[2].key, height: 130, width: 130, crop: :fill %>
         </div>
@@ -98,6 +114,10 @@
           <% elsif female && @game.name == "Animals" %>
             <audio src="<%= audio_path 'A-Leao-Parabens.mp3'%>" data-game-target= "win"></audio>
           <% elsif @game.name == "Animals" %>
+            <audio src="<%= audio_path 'F-Leao-parabens.mp3'%>" data-game-target= "win"></audio>
+          <% elsif female && @game.name == "Fruits" %>
+            <audio src="<%= audio_path 'A-Leao-Parabens.mp3'%>" data-game-target= "win"></audio>
+          <% elsif @game.name == "Fruits" %>
             <audio src="<%= audio_path 'F-Leao-parabens.mp3'%>" data-game-target= "win"></audio>
           <% end %>
           <%= cl_image_tag @game.photos[3].key, height: 130, width: 130, crop: :fill %>
