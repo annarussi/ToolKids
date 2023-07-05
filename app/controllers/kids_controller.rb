@@ -35,6 +35,8 @@ class KidsController < ApplicationController
     @tarzan = Avatar.find_by(name: "tarzan")
     @simba = Avatar.find_by(name: "simba")
     @ariel = Avatar.find_by(name: "ariel")
+    @capitao = Avatar.find_by(name: "capitao")
+    @frozen = Avatar.find_by(name: "frozen")
   end
 
   def moana_avatar
@@ -94,6 +96,28 @@ class KidsController < ApplicationController
 
   def ariel_avatar
     avatar = Avatar.find_by(name: "ariel")
+    @kid.avatar = avatar
+    @kid.save
+
+    respond_to do |format|
+      format.json { head :ok }
+      format.html { head :ok }
+    end
+  end
+
+  def capitao_avatar
+    avatar = Avatar.find_by(name: "capitao")
+    @kid.avatar = avatar
+    @kid.save
+
+    respond_to do |format|
+      format.json { head :ok }
+      format.html { head :ok }
+    end
+  end
+
+  def frozen_avatar
+    avatar = Avatar.find_by(name: "frozen")
     @kid.avatar = avatar
     @kid.save
 

@@ -1,7 +1,7 @@
 <%= render "shared/sidebar", kid: @kid %>
 
 <%# Condition for the voice %>
-<% female = @kid.avatar.name == "moana" || @kid.avatar.name == "pocahontas" || @kid.avatar.name == "ariel" %>
+<% female = @kid.avatar.name == "moana" || @kid.avatar.name == "pocahontas" || @kid.avatar.name == "ariel" || @kid.avatar.name == "frozen" %>
 
 <div data-controller="game">
   <%# Taking the targets for the game controller  %>

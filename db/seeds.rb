@@ -63,6 +63,22 @@ avatar_ariel.save!
 file = URI.open("https://www.historiaparadormir.com.br/wp-content/uploads/2020/03/Ariel.jpg")
 avatar_ariel.photo.attach(io: file, filename: "ariel.jpg", content_type: "image/jpg")
 
+# Create Capitao avatar
+
+avatar_capitao = Avatar.new(name: "capitao")
+avatar_capitao.save!
+
+file = URI.open("https://res.cloudinary.com/dhku8hlz9/image/upload/v1688581833/Capit%C3%A3o-Cancho_st43nc.jpg")
+avatar_capitao.photo.attach(io: file, filename: "capitao.jpg", content_type: "image/jpg")
+
+# Create Frozen avatar
+
+avatar_frozen = Avatar.new(name: "frozen")
+avatar_frozen.save!
+
+file = URI.open("https://res.cloudinary.com/dhku8hlz9/image/upload/v1688581833/rs_1024x759-140312104515-1024.Elsa-Frozen-Disney.jl.031214_copy_scvvlp.jpg")
+avatar_frozen.photo.attach(io: file, filename: "frozen.jpg", content_type: "image/jpg")
+
 # Create Default avatar
 
 avatar_default = Avatar.new(name: "default")

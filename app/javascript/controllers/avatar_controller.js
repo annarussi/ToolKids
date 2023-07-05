@@ -4,7 +4,7 @@ import { Turbo } from "@hotwired/turbo-rails";
 
 // Connects to data-controller="avatar"
 export default class extends Controller {
-  static targets = [ "kidId", "simba", "ariel", "moana", "pocahontas", "mogli", "tarzan"]
+  static targets = [ "kidId", "simba", "ariel", "moana", "pocahontas", "mogli", "tarzan", "capitao", "frozen"]
 
   connect() {
 
@@ -98,6 +98,38 @@ export default class extends Controller {
 
     setTimeout(() =>
     fetch(`/kids/${kidId}/ariel_avatar`, {
+      method: "PATCH",
+      headers: {"Content-Type": "application/json"}
+    }).then(response => {
+      if (response.ok) {
+      // Redirecionamento para outra view
+      Turbo.visit(`/kids/${kidId}/edit`);
+    }}), 3000);
+  }
+
+  capitaoAvatar() {
+
+    const kidId = this.kidIdTarget.innerText.trim();
+    this.capitaoTarget.play()
+
+    setTimeout(() =>
+    fetch(`/kids/${kidId}/capitao_avatar`, {
+      method: "PATCH",
+      headers: {"Content-Type": "application/json"}
+    }).then(response => {
+      if (response.ok) {
+      // Redirecionamento para outra view
+      Turbo.visit(`/kids/${kidId}/edit`);
+    }}), 3000);
+  }
+
+  frozenAvatar() {
+
+    const kidId = this.kidIdTarget.innerText.trim();
+    this.frozenTarget.play()
+
+    setTimeout(() =>
+    fetch(`/kids/${kidId}/frozen_avatar`, {
       method: "PATCH",
       headers: {"Content-Type": "application/json"}
     }).then(response => {

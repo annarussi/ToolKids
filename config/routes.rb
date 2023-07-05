@@ -13,6 +13,8 @@ Rails.application.routes.draw do
     patch :tarzan_avatar, on: :member
     patch :simba_avatar, on: :member
     patch :ariel_avatar, on: :member
+    patch :capitao_avatar, on: :member
+    patch :frozen_avatar, on: :member
     resources :games, only: [:index, :show] do
       patch :completed, on: :member
       member do
