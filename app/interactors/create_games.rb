@@ -101,7 +101,7 @@ class CreateGames
 
     # cozinha image
     filecozinha = URI.open("https://res.cloudinary.com/dhku8hlz9/image/upload/v1688579511/pngtree-cooking-kitchen-cabinets-image_2239055_fvyhay.jpg")
-    game_rooms.photos.attach(io: filecozinha, filename: "abacaxi.png", content_type: "image/png")
+    game_rooms.photos.attach(io: filecozinha, filename: "cozinha.png", content_type: "image/png")
 
     # sala image
     filesala = URI.open("https://res.cloudinary.com/dhku8hlz9/image/upload/v1688580773/istockphoto-1184329667-170667a_da5quk.jpg")
