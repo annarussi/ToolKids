@@ -1,14 +1,22 @@
 <%= render "shared/sidebar", kid: @kid %>
 
-<% if @kid.total_score == 0 %>
-  <%= render "colors_lecture", game: @game %>
+  <div class="container">
 
-<% elsif @kid.total_score == 1 %>
- <%= render "colors_lecture", game: @game %>
-<% elsif @kid.total_score == 2 %>
-<%# write the partial lecture for the third game %>
-  <%= render "colors_lecture", game: @game %>
-<% elsif @kid.total_score == 3 %>
-<%# write the partial lecture for the fourth game %>
-  <h2>You are awesome!</h2>
-<% end %>
+    <div class="d-flex justify-content-center mt-4">
+
+      <% if @kid.total_score == 0 %>
+        <%= cl_video_tag @game.videos[0].key, :controls => true, width:"350px", class:"card-lecture shadow" %>
+      <% elsif @kid.total_score == 1 %>
+        <%= cl_video_tag @game.videos[0].key, :controls => true, width:"350px", class:"card-lecture shadow" %>
+      <% elsif @kid.total_score == 2 %>
+        <%= cl_video_tag @game.videos[0].key, :controls => true, width:"350px", class:"card-lecture shadow" %>
+      <% elsif @kid.total_score == 3 %>
+        <%= cl_video_tag @game.videos[0].key, :controls => true, width:"350px", class:"card-lecture shadow" %>
+      <% end %>
+
+    </div>
+
+    <div class="mt-5 d-flex justify-content-center">
+      <%= link_to "Let's play!", kid_game_path(@kid, @game), class:"btn-brown" %>
+    </div>
+  </div>

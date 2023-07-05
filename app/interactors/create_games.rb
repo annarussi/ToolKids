@@ -7,7 +7,7 @@ class CreateGames
     game_colors
     game_animals
     game_fruits
-    game_verbs
+    game_rooms
   end
 
   private
@@ -91,8 +91,29 @@ class CreateGames
 
   end
 
-  def game_verbs
-    game_verbs = Game.new(name: "Verbs", level: 4, kid: context.kid)
-    game_verbs.save
+  def game_rooms
+    game_rooms = Game.new(name: "Rooms", level: 4, kid: context.kid)
+    game_rooms.save
+
+    # quarto image
+    filequarto = URI.open("https://res.cloudinary.com/dhku8hlz9/image/upload/v1688579511/243a954f75350d0b690e4d5388957599_xkal7o.jpg")
+    game_rooms.photos.attach(io: filequarto, filename: "quarto.png", content_type: "image/png")
+
+    # cozinha image
+    filecozinha = URI.open("https://res.cloudinary.com/dhku8hlz9/image/upload/v1688579511/pngtree-cooking-kitchen-cabinets-image_2239055_fvyhay.jpg")
+    game_rooms.photos.attach(io: filecozinha, filename: "cozinha.png", content_type: "image/png")
+
+    # sala image
+    filesala = URI.open("https://res.cloudinary.com/dhku8hlz9/image/upload/v1688580773/istockphoto-1184329667-170667a_da5quk.jpg")
+    game_rooms.photos.attach(io: filesala, filename: "sala.png", content_type: "image/png")
+
+    # banheiro image
+    filebanheiro = URI.open("https://res.cloudinary.com/dhku8hlz9/image/upload/v1688579511/istockphoto-1135317474-170667a_ara7pn.jpg")
+    game_rooms.photos.attach(io: filebanheiro, filename: "banheiro.png", content_type: "image/png")
+
+    # objects lecture (ainda está animal lecture)
+    filelecture = URI.open("https://res.cloudinary.com/dhku8hlz9/video/upload/v1686831527/ee964167c883afed556efaa902e232c38f89026184d9688ce963a15b8c78ccab_mmye80.mp4")
+    game_rooms.videos.attach(io: filelecture, filename: "fruits-lecture.mp4", content_type: "video/webm")
+
   end
 end
