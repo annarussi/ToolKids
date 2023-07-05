@@ -19,11 +19,15 @@
 
     <div class="my-5" data-action="click->game#playSound">
       <%# Audio of the exercise %>
-      <% if female %>
-        <%= cl_video_tag @game.videos[8].key, class: "d-none", data: { game_target: "exercise" } %>
-      <% else %>
-        <%= cl_video_tag @game.videos[9].key, class: "d-none", data: { game_target: "exercise" } %>
-      <% end %>
+      <% if female && @game.name == "Colors" %>
+            <audio src="<%= audio_path 'A-Vermelho.mp3'%>" data-game-target= "exercise"></audio>
+          <% elsif @game.name == "Colors"  %>
+            <audio src="<%= audio_path 'F-Vermelho.mp3'%>" data-game-target= "exercise"></audio>
+          <% elsif female && @game.name == "Animals" %>
+            <audio src="<%= audio_path 'A-Leao.mp3'%>" data-game-target= "exercise"></audio>
+          <% elsif @game.name == "Animals" %>
+            <audio src="<%= audio_path 'F-Leao.mp3'%>" data-game-target= "exercise"></audio>
+          <% end %>
 
       <div class="card audio-game">
         <h2><i class="fa-solid fa-volume-high" style="color: #ffffff;" data-action="click->game#playSound"></i></h2>
@@ -35,10 +39,14 @@
       <div class="card rounded-4" data-game-target="wrongAnswer1Card">
         <div data-action="click->game#playWrongAnswer1">
           <%# Audio of the first card %>
-          <% if female %>
-            <%= cl_video_tag @game.videos[0].key, class: "d-none", data: { game_target: "wrongAnswer1" } %>
-          <% else %>
-            <%= cl_video_tag @game.videos[1].key, class: "d-none", data: { game_target: "wrongAnswer1" } %>
+          <% if female && @game.name == "Colors" %>
+            <audio src="<%= audio_path 'A-Azul.mp3'%>" data-game-target= "wrongAnswer1"></audio>
+          <% elsif @game.name == "Colors"  %>
+            <audio src="<%= audio_path 'F-Azul.mp3'%>" data-game-target= "wrongAnswer1"></audio>
+          <% elsif female && @game.name == "Animals" %>
+            <audio src="<%= audio_path 'A-Elefante.mp3'%>" data-game-target= "wrongAnswer1"></audio>
+          <% elsif @game.name == "Animals" %>
+            <audio src="<%= audio_path 'F-Elefante.mp3'%>" data-game-target= "wrongAnswer1"></audio>
           <% end %>
           <%= cl_image_tag @game.photos[0].key, height: 130, width: 130, crop: :fill %>
         </div>
@@ -47,10 +55,14 @@
       <div class="card rounded-4" data-game-target="wrongAnswer2Card">
         <div data-action="click->game#playWrongAnswer2">
           <%# Audio of the second card %>
-          <% if female %>
-            <%= cl_video_tag @game.videos[2].key, class: "d-none", data: { game_target: "wrongAnswer2" } %>
-          <% else %>
-            <%= cl_video_tag @game.videos[3].key, class: "d-none", data: { game_target: "wrongAnswer2" } %>
+          <% if female && @game.name == "Colors" %>
+            <audio src="<%= audio_path 'A-Amarelo.mp3'%>" data-game-target= "wrongAnswer2"></audio>
+          <% elsif @game.name == "Colors"  %>
+            <audio src="<%= audio_path 'F-Amarelo.mp3'%>" data-game-target= "wrongAnswer2"></audio>
+          <% elsif female && @game.name == "Animals" %>
+            <audio src="<%= audio_path 'A-Girafa.mp3'%>" data-game-target= "wrongAnswer2"></audio>
+          <% elsif @game.name == "Animals" %>
+            <audio src="<%= audio_path 'F-Girafa.mp3'%>" data-game-target= "wrongAnswer2"></audio>
           <% end %>
           <%= cl_image_tag @game.photos[1].key, height: 130, width: 130, crop: :fill %>
         </div>
@@ -63,10 +75,14 @@
       <div class="card rounded-4" data-game-target="wrongAnswer3Card">
         <div data-action="click->game#playWrongAnswer3">
           <%# Audio for the third card %>
-          <% if female %>
-            <%= cl_video_tag @game.videos[4].key, class: "d-none", data: { game_target: "wrongAnswer3" } %>
-          <% else %>
-            <%= cl_video_tag @game.videos[5].key, class: "d-none", data: { game_target: "wrongAnswer3" } %>
+          <% if female && @game.name == "Colors" %>
+            <audio src="<%= audio_path 'A-Verde.mp3'%>" data-game-target= "wrongAnswer3"></audio>
+          <% elsif @game.name == "Colors"  %>
+            <audio src="<%= audio_path 'F-Verde.mp3'%>" data-game-target= "wrongAnswer3"></audio>
+          <% elsif female && @game.name == "Animals" %>
+            <audio src="<%= audio_path 'A-Tigre.mp3'%>" data-game-target= "wrongAnswer3"></audio>
+          <% elsif @game.name == "Animals" %>
+            <audio src="<%= audio_path 'F-Tigre.mp3'%>" data-game-target= "wrongAnswer3"></audio>
           <% end %>
           <%= cl_image_tag @game.photos[2].key, height: 130, width: 130, crop: :fill %>
         </div>
@@ -75,10 +91,14 @@
       <div class="card rounded-4" data-confetti-follow-value="false" data-controller="confetti" data-action="click->confetti#spray" data-animation-value="basic">
         <div data-action="click->game#playWin">
           <%# Audio for the winner card %>
-          <% if female %>
-            <%= cl_video_tag @game.videos[6].key, class: "d-none", data: { game_target: "win"  } %>
-          <% else %>
-            <%= cl_video_tag @game.videos[7].key, class: "d-none", data: { game_target: "win"  } %>
+          <% if female && @game.name == "Colors" %>
+            <audio src="<%= audio_path 'A-Vermelho-parabens.mp3'%>" data-game-target= "win"></audio>
+          <% elsif @game.name == "Colors"  %>
+            <audio src="<%= audio_path 'F-Vermelho-parabens.mp3'%>" data-game-target= "win"></audio>
+          <% elsif female && @game.name == "Animals" %>
+            <audio src="<%= audio_path 'A-Leao-Parabens.mp3'%>" data-game-target= "win"></audio>
+          <% elsif @game.name == "Animals" %>
+            <audio src="<%= audio_path 'F-Leao-parabens.mp3'%>" data-game-target= "win"></audio>
           <% end %>
           <%= cl_image_tag @game.photos[3].key, height: 130, width: 130, crop: :fill %>
         </div>
