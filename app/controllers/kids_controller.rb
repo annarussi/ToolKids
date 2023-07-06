@@ -1,5 +1,5 @@
 class KidsController < ApplicationController
-  before_action :set_kids, only: %i[show destroy edit moana_avatar pocahontas_avatar mogli_avatar tarzan_avatar simba_avatar ariel_avatar]
+  before_action :set_kids, only: %i[show destroy edit moana_avatar pocahontas_avatar mogli_avatar tarzan_avatar simba_avatar ariel_avatar capitao_avatar frozen_avatar]
   protect_from_forgery with: :null_session
 
   def index
